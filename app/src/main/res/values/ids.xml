@@ -2,4 +2,5 @@
 <resources>
     <item name="mapa" type="id">Mapa</item>
     <item name="rank" type="id">Rank</item>
+    <item name="list" type="id">list</item>
 </resources>
