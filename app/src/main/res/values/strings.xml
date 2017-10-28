@@ -15,4 +15,6 @@
         completions."
     </string>
     <string name="ja_tem_uma_conta">Já tem uma conta? <font color='#0000EE'>Login</font></string>
+    <!--Mensagem de alert dialog do MapaFragment-->
+    <string name="alert_maps"></string>
 </resources>
