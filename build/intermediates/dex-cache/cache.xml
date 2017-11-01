@@ -3,21 +3,426 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\vinif_000\Desktop\Projeto Ecoloc\EcoLoc\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Guedes\.android\build-cache\78bae509673f35339667be54f4aa56abea33016e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b8df1b1e51fe14b0e89b3845dc2e215a024a09f">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_419f81cde23766533682365bc2286ee804cb8f48\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\1.9.0\a681c044244d9fc375198588297a39ba78028423\retrofit-1.9.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a681c044244d9fc375198588297a39ba78028423">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-1.9.0_3b26edec5e9ba878923bbd354c2c2b7e757aae1c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\6d57f06aa327814059e4c83b68e90d5870293bd2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="af6ee25641df3142059c0828517aa7ee6eba08d6">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_34c364f86fd4ec5e55bb37f39226029b0d8ad41a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\7c4fd502336d3b6e2959e04b6c2efe96c1bc4df9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7e5d6af5565eb077d6b8d2fdd8df9df663b310bd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\f611c0a6ffd97be8de8820a8ec226efd2c1b87db\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3ac2923010759015adb32b0e264db656a307ce2e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="867ba7cd28ab07cfb7c372d79881ec8ad986ab73">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_5fbd37ca32cdd99743db211b47d72fe0b536fcab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\c2cee3ecc2ca696f38202bbdfcb30e64db105e7c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0b57e90efe8c1d774cf69d00122cfec4577e6cef\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\6618a70c86142c7e7796d2412985e401f814d525\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9c9bdb4b2497465a6cf7d5e8f57c5298f828a380">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4ba84fdf62751fb14ee34e71de9b9c5b6dddf019\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\ab25563b2105369b1faa49c7acbf7c55c233e6ce\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9389c6c03497c31ac9a1ee587623bc7aff6373b4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\736c00ca3b3ac198bc82f922b0af890355456f61\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="27775d59b16610ac76f1b83693fedd9520396332">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_04a12ca7b6725303f42051b0c9582c610d30a40d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\9cfa7a0444b649982ae90eca653a1bbca8323a42\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="58adcfbe2c8393765e84c5489d01bba6a5159eb2">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_85126acb2d543af28fc075f997cc223842d2f211\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\d1c5f6913722c7a45fc7018744202ecdefae1fc0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="56690259d2254d4d0216730ec6889a577b61812c">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a5540f16214229e0b4e3bdcdfac89ce8d26002a5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\ec7541d2b4ee102a7e7be124b02ebdada7448791\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9aedc597d74c6d77258ce5236e9abff0c3cc65e3">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_761b1bd892477f67443304a785eb82ca3dd0043a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.gradle\caches\modules-2\files-2.1\com.android.support.constraint\constraint-layout-solver\1.0.2\b9cd8fc6bd15cb915735d34535db30ece0c44603\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_60c12d984b285a563ca8a9d74866ec00b68e70d7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\79a35b5edc4ed8fb2a3f0127f09bffc1edeb00e1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_627237c4a276850f774909e8a20f1bc7e473ec2c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\60c1dfad49356c69f6931528697db3371a535c15\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="744c49c02a27569cc4cc049685d3649e4ef439f2">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4190119ddc0faeedfd58ad5f50b9e0232717237f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\vinif_000\Desktop\Projeto Ecoloc\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_55719d520919ff14e2a2421f15d4a69abe9e36ba\classes.dex" />
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_9e85b4e761cbbc32020b8429e1b87c46e49d7ce4\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\vinif_000\Desktop\Projeto Ecoloc\EcoLoc\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\Guedes\.android\build-cache\980aefd5607955828b14c20cd587dd9ae0f8d301\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="b5d7d572b2c9f4ef735596d49fef92ac55cf20b6">
-        <dex dex="C:\Users\vinif_000\Desktop\Projeto Ecoloc\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_0d0874f4d0a87e2ef7ec4a55760d63b3fb49c1e4\classes.dex" />
+        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8dc137416f6e6408d2e321aa81a8a020c0c8322d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\4005060a84daa8ab9e544bf1301a6de2ba04f9da\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cb4af597d079ffdc0984a3ec2c03cbf6a1b9f869">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_caee5e5578ca71ea09cb520fe190c3a17236c59e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.7.5\7a15a7db50f86c4b64aa3367424a60e3a325b8f1\okhttp-2.7.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7a15a7db50f86c4b64aa3367424a60e3a325b8f1">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-2.7.5_45a42a1db3cb0c8a029f5f9b58248522af84d65b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\f672f371b71e8f1fef4798aa62fe7094aebccf74\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="724ce977487ab3a215d4d2eb47d8dccd9f30013f">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_33f82cd7233c20f9e0ef98e3855c9b2a6bdc4a8a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\c88076ed9c1f960ce3290427862b07d32cd4a3e4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3da03bda45deb0d2d8892485fb4c4b833711bc2b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\c55eaed9e04e37b29271da4ddfc07c91315889a9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="77f9593d979f4347344be233bd0d888315f79517">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1a7bdb463f766d84095f55f7599180101a5c6db9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\8dab18dc0af52ba86a0dfb79f46051b1f0f9ef07\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2c6fcd6267cbac6509a2e72a61127534a1d616cf">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6d651a40786ac1a1b6c34ab651d3ef66d1dca830\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.0_f81ecfd6806498a7f14d5d1dd2e0e39e9294e2f7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\1d4f7a37a3ee6b3fc759b7dff72f0c17a232d593\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea34579b1be157cd792376362157e9c54ebb4cd7">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4ce4b242ed54403ab796d3a15367bbd4be9c7871\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\3f9253dadeeb775daa1a8baa328c05578a8e1bfd\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ec3360994c4007c282a4b651723603e82682b601">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_de49cf6b3a1f1f100442d0dad52f0070dbcf19a5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\1139b8f7649ffccfe520b5f5c8a0ef335bea0625\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b000ecceb9877fefcdc7ab1959ff03df91551656">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2ba591c25b0cce53095db686885345bd2c009579\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\cf15877542af5150939d4adfbd46e4df414f428b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0af4f577b4a21eb9be2a7f52e33b077b67e6d9f8">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8a2bf2a14ab0902af4c5ea8535a193ec1d2cdfb1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\325c70874d68b98f17a4cbeaa0b1602424b5252c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_968103c4d59ca846af130faa1acc328da209ce57\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\66c9bf7e400eb287e14b941daa1eacf6fd818854\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ebb797fcafa1fdc607b13226e0eec9c6ffda49c2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\0cd4727167cec72030830761ad731090650d9dcb\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9cbdabba632cbf8be001cdbf34110cf42a64015">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_58a78b945a4ad000b86ae5c35c180edf45bb628d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\8db5aa7422c9379c02d33ca39750a891aa366fcd\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6d9ed9a288364688e7fcf6704776284dac1eb42e">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_206311638c0fb554b4fd6fc30a93bf1d8cdcd21d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\c8c478166e3a2d96f01b4410fb2f3a7cca2773a8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="345a1b5cf5b144ce18ba6962bc66a7e2f26c1c1b">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1707c0e0494d79d2004a55307a29fcf125c056de\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\db6a5be79ce15c6f72b53edc28f5602c3bab8d5b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a1897426566e408a5c20a3d931f77d89771d07f">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_670549e5855d1518ae542cf292f3439d0e5eb3e2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\b910bb9baf49af85e5681b30e9a3b20a8f097db0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fd76d95678a6b2b8a49bb8a9fb5bcef7aedb70e7">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f6e462b8ad0098ec32e9b6173cd95faaba6dcffb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.3.1_d73fb2a8c33b5a7f77062b7271de00cd7b60c297\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\43d98dce7fa6e2449519f9e4e6aa1c4ab0faa3f4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_977ddedb4c88d23880e3ef56d015e62f5a7ac26e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\7ed6c0a1f1194d31347c17763a9da20de5e70a30\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_bbd8ada7f7531eb8dd52b0d9f5018a4db9973493\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.6.0_602f39867abb096413fb91a1cc6fc2e962a66883\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\0f3e47ceee7a0df66916c848ae220c847591c492\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="71eda10e33212e44245524b5087366ff8d805825">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d3f03f328517cab1259b446144838c938c191501\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\41ceba12c066b204678eee1a6ed53c68ae9ae984\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3cef4dd9cf02ecee57e37b26ab25e3d0486b7595\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\963286d80db3bda711ea30d6c1371481d67b8265\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9912b0e675baee7c2fe012a0c4b5f0888d2a6178\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\6c027f5fef13933ef28a50d7a5d97575e552e6c8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c9c12f9ae973efc571d2f7d55465dea7a810a9a7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\36c424f2e713967034831d09a020a259d8e73307\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0c3e81d3eb86b86d194b5cdb6a4de78203f6f7fd">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2fce02d5a4ea56cc659c14edfda57c7d30b86c40\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\50ac96f51c3e25766d2d91078cb6cee53a876822\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="eb576427887e497cd958a475475f9206e38dc314">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a67210e9a82b8901f94c429330dc1010bf0682fc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Guedes\.android\build-cache\9784eb4c9ae27d898628c1a1e8665011ccb94865\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="697679619b00837e3d09e9988a2e1e2a9009d502">
+        <dex dex="C:\Users\Guedes\Projetos Android Studio\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d6a29ada47024865e91abff4ba81a90881a2d995\classes.dex" />
     </item>
 
 </items>

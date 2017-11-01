@@ -43,7 +43,7 @@ import static android.content.Context.LOCATION_SERVICE;
  * Created by Geraldo on 06/06/2017.
  */
 
-public class MapaFragment extends Fragment implements OnMapReadyCallback {
+public class MapaFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private static final int TAG_CODE_PERMISSION_LOCATION = 1;
     GoogleMap mGoogleMap;
@@ -54,6 +54,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback {
     Marker mCurrLocation;
     LocationRequest mLocationRequest;
     private static final String TAG = "MapaFragment";
+    Marker mMarker;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -118,14 +119,43 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback {
 
         mGoogleMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
-        mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(-23.653434, -46.711641)).title("Uninove"));
+        mGoogleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                String clickCount;
+                clickCount = (String) marker.getTitle();
 
-
-            mGoogleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
-                @Override
-                public void onMapLongClick(LatLng latLng) {
-                    Log.d(TAG, "onMapClick: ["+latLng.latitude +"/"+latLng.longitude +"]");
+                if(clickCount != null){
+                    Toast.makeText(getActivity(), marker.getTitle(), Toast.LENGTH_SHORT).show();
                 }
-            });
+
+            }
+        });
+
+        mGoogleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+            @Override
+            public void onMapLongClick(LatLng latLng) {
+
+                if(mMarker != null){
+                    mMarker.remove();
+                    Log.d(TAG, "onMapClick: ["+latLng.latitude +"/"+latLng.longitude +"]");
+                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title("Quer cadastrar este ponto?").snippet("Cadastre clicando aqui"));
+                }else {
+                    Log.d(TAG, "onMapClick: ["+latLng.latitude +"/"+latLng.longitude +"]");
+                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title("Quer cadastrar este ponto?").snippet("Cadastre clicando aqui"));
+                }
+
+            }
+        });
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+
+
+
+        return false;
     }
 }

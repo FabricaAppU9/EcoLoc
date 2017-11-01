@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import br.com.fabappu9.ecoloc.Permissoes.Permissoes;
+
 public class LoginActivity extends AppCompatActivity {
 
 
@@ -19,6 +21,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        Permissoes permissoes = new Permissoes();
+        permissoes.setMyPermissionsRequestAccessFineLocation(LoginActivity.this);
 
         cadastrar  = (Button) findViewById(R.id.CadastrarButton);
 

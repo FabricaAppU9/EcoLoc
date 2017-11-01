@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.google.android.gms:play-services-fitness-8.3.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/9784eb4c9ae27d898628c1a1e8665011ccb94865/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/9784eb4c9ae27d898628c1a1e8665011ccb94865/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
