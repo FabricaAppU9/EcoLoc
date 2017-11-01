@@ -39,6 +39,7 @@
             android:value="AIzaSyC9iV62h0a9pKjUnHg2Fksin4C3a_YpDgs" />
         <!-- Maps -->
 
+        <activity android:name=".InfoEnderecoActivity"></activity>
     </application>
 
 </manifest>

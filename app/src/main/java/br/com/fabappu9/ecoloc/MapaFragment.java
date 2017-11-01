@@ -3,6 +3,7 @@ package br.com.fabappu9.ecoloc;
 import android.Manifest;
 import android.app.Fragment;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Criteria;
@@ -55,6 +56,8 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
     LocationRequest mLocationRequest;
     private static final String TAG = "MapaFragment";
     Marker mMarker;
+    String cadastrarEstePonto = "Quer cadastrar este ponto?";
+    public static final int CONSTANTE_TELA_1 = 1;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -123,10 +126,23 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
             @Override
             public void onInfoWindowClick(Marker marker) {
                 String clickCount;
-                clickCount = (String) marker.getTitle();
+                clickCount = marker.getTitle();
 
-                if(clickCount != null){
-                    Toast.makeText(getActivity(), marker.getTitle(), Toast.LENGTH_SHORT).show();
+                if(clickCount != cadastrarEstePonto){
+
+                    String latitude = String.valueOf(marker.getPosition().latitude);
+                    String longitude = String.valueOf(marker.getPosition().longitude);
+
+                    Bundle params = new Bundle();
+                    params.putString("Latitude", latitude);
+                    params.putString("Longitude", longitude);
+
+                    Intent intent = new Intent(getActivity(), InfoEnderecoActivity.class);
+
+                    intent.putExtras(params);
+
+                    startActivityForResult(intent, CONSTANTE_TELA_1 );
+
                 }
 
             }
@@ -139,10 +155,10 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                 if(mMarker != null){
                     mMarker.remove();
                     Log.d(TAG, "onMapClick: ["+latLng.latitude +"/"+latLng.longitude +"]");
-                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title("Quer cadastrar este ponto?").snippet("Cadastre clicando aqui"));
+                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarEstePonto));
                 }else {
                     Log.d(TAG, "onMapClick: ["+latLng.latitude +"/"+latLng.longitude +"]");
-                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title("Quer cadastrar este ponto?").snippet("Cadastre clicando aqui"));
+                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarEstePonto));
                 }
 
             }
