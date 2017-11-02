@@ -31,6 +31,7 @@
             android:textSize="15dp" />
 
         <EditText
+            android:id="@+id/txtLoginUser"
             android:layout_width="300dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
@@ -40,6 +41,7 @@
             android:paddingLeft="20dp" />
 
         <EditText
+            android:id="@+id/txtLoginPass"
             android:layout_width="300dp"
             android:layout_height="45dp"
             android:layout_gravity="center"

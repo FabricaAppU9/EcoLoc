@@ -2,6 +2,7 @@ package br.com.fabappu9.ecoloc.network;
 
 
 import br.com.fabappu9.ecoloc.Model.Resposta;
+import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.client.OkClient;
@@ -45,13 +46,13 @@ public class APIClient {
                 @Query("SENHA") String senha,
                 Callback<Resposta> callbackResposta
         );
-       /*@GET("/usuarioDTO.php")
+       @GET("/usuarioDTO.php")
                 void setUsuarioLoginDTO(
                 @Query("CHAVE") String chave,
                 @Query("CHAMADA") String chamada,
                 @Query("LOGIN") String login,
                 @Query("SENHA") String senha,
-                Callback<Resposta> callbackResposta
-        );*/
+                Callback<RespostaLogin> callbackResposta
+        );
     }
 }
