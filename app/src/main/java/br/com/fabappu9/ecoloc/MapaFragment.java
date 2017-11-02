@@ -118,7 +118,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
 
         //mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(-23.768482, -46.705502)).title("Minha ultima posição com sinal").snippet("Testando map fragment"));
 
-        CameraPosition cameraPosition = CameraPosition.builder().target(new LatLng(-23.768482, -46.705502)).zoom(16).bearing(0).tilt(4).build();
+        CameraPosition cameraPosition = CameraPosition.builder().target(new LatLng(-23.761912, -46.792657)).zoom(16).bearing(0).tilt(4).build();
 
         mGoogleMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
