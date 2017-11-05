@@ -2,8 +2,10 @@ package br.com.fabappu9.ecoloc;
 
 import android.Manifest;
 import android.app.Fragment;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Criteria;
@@ -58,22 +60,32 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
     Marker mMarker;
     String cadastrarEstePonto = "Quer cadastrar este ponto?";
     public static final int CONSTANTE_TELA_1 = 1;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor sharedPrefEditor;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         LayoutInflater inflater = getActivity().getLayoutInflater();
 
+        sharedPreferences = getActivity().getSharedPreferences("jaLogouAntes", Context.MODE_PRIVATE);
+        sharedPrefEditor = sharedPreferences.edit();
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("Instuções")
-                .setView(inflater.inflate(R.layout.alert_dialog,null))
-                .setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // FIRE ZE MISSILES!
-                    }
-                });
-        builder.show();
+        Boolean jaLogouAntes = sharedPreferences.getBoolean("jaLogouAntes", false);
+
+        if(jaLogouAntes != true){
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle("Instuções")
+                    .setView(inflater.inflate(R.layout.alert_dialog,null))
+                    .setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            Boolean conferindo = sharedPrefEditor.putBoolean("jaLogouAntes", true).commit();
+                            Log.d(TAG, "onClick: "+ conferindo);
+                        }
+                    });
+            builder.show();
+
+        }
 
 
         mMapView = (MapView) mView.findViewById(R.id.map);
