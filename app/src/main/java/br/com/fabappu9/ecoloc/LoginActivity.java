@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         respostaCallback = new Callback<RespostaLogin>() {
             @Override
             public void success(RespostaLogin resposta, Response response) {
-                if (resposta.getRETORNO().equals("LOGADO COM SUCESSO")){
+                if (resposta.getRETORNO().equals("SUCESSO")){
                     Intent intent1 = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent1);
                 }else{
