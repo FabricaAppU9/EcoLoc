@@ -27,12 +27,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(@IdRes int tabId) {
                 Fragment fragment = null;
-                if(tabId == R.id.home){
-                    fragment = new HomeFragment();
-                }else if(tabId == R.id.mapa){
+                if(tabId == R.id.mapa){
                     fragment = new MapaFragment();
-                }else if(tabId == R.id.rank){
-                    fragment = new RankFragment();
                 }else if(tabId == R.id.perfil){
                     fragment = new PerfilFragment();
                 }
@@ -42,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    void setarMapa(){
+        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        bottomBar.setDefaultTabPosition(R.id.mapa);
     }
 }
 

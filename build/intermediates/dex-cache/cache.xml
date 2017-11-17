@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="D:\Projetos\Android\EcoLoc\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\denis\AndroidStudioProjects\EcoLoc\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="70187b02348acd0708167fcec3eeb0c683e4bba9">
-        <dex dex="D:\Projetos\Android\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_dc1ea43ee224de3da172f7c1fd6247b92493511a\classes.dex" />
+        sha1="f70b2f41149bbf2360ea6deefe4351afd9d58eb7">
+        <dex dex="C:\Users\denis\AndroidStudioProjects\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_7e4a4e1eea4139611f5d6a8591adb1122065506e\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="D:\Projetos\Android\EcoLoc\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\denis\AndroidStudioProjects\EcoLoc\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="D:\Projetos\Android\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_e1a1a62cfc8abda92c43c54967657718c12bb415\classes.dex" />
+        <dex dex="C:\Users\denis\AndroidStudioProjects\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_e771a3c65a73ef064adaa9522985fd31ee563571\classes.dex" />
     </item>
 
 </items>
