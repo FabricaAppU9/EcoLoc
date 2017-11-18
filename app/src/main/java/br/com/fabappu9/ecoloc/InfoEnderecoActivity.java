@@ -17,16 +17,18 @@ public class InfoEnderecoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_endereco);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Intent intent = getIntent();
 
         if (intent != null){
             Bundle params = intent.getExtras();
             if(params != null){
-               String latlng =  params.getString("Latitude") + params.getString("Longitude");
+               String enderecoSaida =  params.getString("Endereco");
                 endereco  = (EditText) findViewById(R.id.editTxtEndereco);
-                endereco.setText(latlng);
+                endereco.setText(enderecoSaida);
 
-               Log.d(TAG, "onCreate: " + latlng);
+               Log.d(TAG, "onCreate: " + enderecoSaida);
 
             }
         }

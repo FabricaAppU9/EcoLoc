@@ -3,21 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\denis\AndroidStudioProjects\EcoLoc\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        jar="C:\Users\Guilherme\.android\build-cache\6319023447688c0939e2468276d76b96179bb2f4\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="f70b2f41149bbf2360ea6deefe4351afd9d58eb7">
-        <dex dex="C:\Users\denis\AndroidStudioProjects\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_7e4a4e1eea4139611f5d6a8591adb1122065506e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\denis\AndroidStudioProjects\EcoLoc\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\denis\AndroidStudioProjects\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_e771a3c65a73ef064adaa9522985fd31ee563571\classes.dex" />
+        sha1="e70a3fed299d84cd868614e11021664d72b8e488">
+        <dex dex="C:\Users\Guilherme\Desktop\work\Eco_Loc_Fabrica\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b434cff69ff311166b0555e3d601df6630568912\classes.dex" />
     </item>
 
 </items>

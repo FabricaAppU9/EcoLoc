@@ -29,6 +29,8 @@ public class CadastradoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrado);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         txtNome = (TextView) findViewById(R.id.txtNome);
         txtUsuario = (TextView) findViewById(R.id.txtUsuario);
         txtSenha = (TextView) findViewById(R.id.txtSenha);

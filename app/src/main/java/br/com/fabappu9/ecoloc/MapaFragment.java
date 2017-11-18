@@ -58,7 +58,8 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
     LocationRequest mLocationRequest;
     private static final String TAG = "MapaFragment";
     Marker mMarker;
-    String cadastrarEstePonto = "Quer cadastrar este ponto?";
+    String cadastrarEstePonto = "Deseja cadastrar este ponto?";
+    String cadastrarSnippet = "";
     public static final int CONSTANTE_TELA_1 = 1;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor sharedPrefEditor;
@@ -130,7 +131,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
 
         //mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(-23.768482, -46.705502)).title("Minha ultima posição com sinal").snippet("Testando map fragment"));
 
-        CameraPosition cameraPosition = CameraPosition.builder().target(new LatLng(-23.761912, -46.792657)).zoom(16).bearing(0).tilt(4).build();
+        CameraPosition cameraPosition = CameraPosition.builder().target(new LatLng(-23.652863, -46.711486)).zoom(16).bearing(0).tilt(4).build();
 
         mGoogleMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
@@ -142,12 +143,11 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
 
                 if(clickCount != cadastrarEstePonto){
 
-                    String latitude = String.valueOf(marker.getPosition().latitude);
-                    String longitude = String.valueOf(marker.getPosition().longitude);
+                    double latitude = marker.getPosition().latitude;
+                    double longitude = marker.getPosition().longitude;
 
                     Bundle params = new Bundle();
-                    params.putString("Latitude", latitude);
-                    params.putString("Longitude", longitude);
+                    params.putString("Endereco", Localizador.encontrarEndereco(getActivity(), latitude, longitude));
 
                     Intent intent = new Intent(getActivity(), InfoEnderecoActivity.class);
 
@@ -167,10 +167,12 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                 if(mMarker != null){
                     mMarker.remove();
                     Log.d(TAG, "onMapClick: ["+latLng.latitude +"/"+latLng.longitude +"]");
-                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarEstePonto));
+                    cadastrarSnippet = Localizador.encontrarEndereco(getActivity(), latLng.latitude, latLng.longitude);
+                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarSnippet));
                 }else {
                     Log.d(TAG, "onMapClick: ["+latLng.latitude +"/"+latLng.longitude +"]");
-                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarEstePonto));
+                    cadastrarSnippet = Localizador.encontrarEndereco(getActivity(), latLng.latitude, latLng.longitude);
+                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarSnippet));
                 }
 
             }

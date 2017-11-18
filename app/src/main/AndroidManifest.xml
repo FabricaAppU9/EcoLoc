@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".CadastradoActivity" />
+        <activity android:name=".CadastradoActivity" android:label="Cadastrar"  android:parentActivityName=".LoginActivity"/>
 
         <!-- Maps KEY -->
         <meta-data
@@ -39,7 +39,7 @@
             android:value="AIzaSyC9iV62h0a9pKjUnHg2Fksin4C3a_YpDgs" />
         <!-- Maps -->
 
-        <activity android:name=".InfoEnderecoActivity"></activity>
+        <activity android:name=".InfoEnderecoActivity" android:label="Cadastrar Ponto" android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
