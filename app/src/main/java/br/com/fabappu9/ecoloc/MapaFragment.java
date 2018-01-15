@@ -49,17 +49,17 @@ import static android.content.Context.LOCATION_SERVICE;
 public class MapaFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private static final int TAG_CODE_PERMISSION_LOCATION = 1;
-    GoogleMap mGoogleMap;
-    MapView mMapView;
-    View mView;
-    LatLng latLng;
-    GoogleApiClient mGoogleApiClient;
-    Marker mCurrLocation;
-    LocationRequest mLocationRequest;
+    private GoogleMap mGoogleMap;
+     MapView mMapView;
+    private View mView;
+    private LatLng latLng;
+    private GoogleApiClient mGoogleApiClient;
+    private Marker mCurrLocation;
+    private LocationRequest mLocationRequest;
     private static final String TAG = "MapaFragment";
-    Marker mMarker;
-    String cadastrarEstePonto = "Deseja cadastrar este ponto?";
-    String cadastrarSnippet = "";
+    private Marker mMarker;
+    private String cadastrarEstePonto = "Deseja cadastrar este ponto?";
+    private String cadastrarSnippet = "";
     public static final int CONSTANTE_TELA_1 = 1;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor sharedPrefEditor;
@@ -127,7 +127,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
 
         mGoogleMap.setMyLocationEnabled(true);
         mGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
-        mGoogleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
         //mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(-23.768482, -46.705502)).title("Minha ultima posição com sinal").snippet("Testando map fragment"));
 
