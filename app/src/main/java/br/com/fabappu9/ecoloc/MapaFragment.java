@@ -50,7 +50,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
 
     private static final int TAG_CODE_PERMISSION_LOCATION = 1;
     private GoogleMap mGoogleMap;
-     MapView mMapView;
+    private MapView mMapView;
     private View mView;
     private LatLng latLng;
     private GoogleApiClient mGoogleApiClient;

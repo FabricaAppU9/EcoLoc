@@ -53,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent1);
+                finish();
                 /*
                 String Usuario = user.getText().toString();
                 String Senha = pass.getText().toString();
