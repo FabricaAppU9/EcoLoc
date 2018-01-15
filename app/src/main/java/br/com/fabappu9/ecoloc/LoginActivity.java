@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,10 +19,10 @@ import retrofit.client.Response;
 import br.com.fabappu9.ecoloc.network.APIClient;
 
 public class LoginActivity extends AppCompatActivity {
-    TextView user;
-    TextView pass;
-    Button cadastrar;
-    Button login;
+    private TextView user;
+    private TextView pass;
+    private Button cadastrar;
+    private Button login;
     private Callback<RespostaLogin> respostaCallback;
 
 
@@ -54,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent1);
                 finish();
+
                 /*
                 String Usuario = user.getText().toString();
                 String Senha = pass.getText().toString();

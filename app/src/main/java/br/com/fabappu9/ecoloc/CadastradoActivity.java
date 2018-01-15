@@ -72,7 +72,7 @@ public class CadastradoActivity extends AppCompatActivity {
 
             @Override
             public void failure(RetrofitError error) {
-                Toast.makeText(CadastradoActivity.this, "Deu Ruim: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(CadastradoActivity.this, "Algum erro aconteceu: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         };
     }
