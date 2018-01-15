@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(LoginActivity.this, CadastradoActivity.class);
                 startActivity(intent1);
+                finish();
 
             }
         });
@@ -52,11 +53,7 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent1);
-                finish();
-
-                /*
+           
                 String Usuario = user.getText().toString();
                 String Senha = pass.getText().toString();
 
@@ -66,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                     configurarCallback();
                     new APIClient().getRestService().setUsuarioLoginDTO("12345", "GETLOGARUSUARIO", Usuario, Senha, respostaCallback);
                 }
-                */
+
             }
         });
     }
@@ -77,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (resposta.getRETORNO().equals("SUCESSO")){
                     Intent intent1 = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent1);
+                    finish();
                 }else{
                     Toast.makeText(LoginActivity.this, resposta.getRETORNO() +" ,Verifique usuário e senha" , Toast.LENGTH_SHORT).show();
                 }

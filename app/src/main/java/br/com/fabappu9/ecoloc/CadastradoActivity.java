@@ -1,5 +1,6 @@
 package br.com.fabappu9.ecoloc;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,22 +41,33 @@ public class CadastradoActivity extends AppCompatActivity {
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Nome =txtNome.getText().toString();
-                String Usuario =txtUsuario.getText().toString();
-                String Senha =txtSenha.getText().toString();
-                String Confirmar =txtConfirmarSenha.getText().toString();
+                String nome =txtNome.getText().toString();
+                String usuario =txtUsuario.getText().toString();
+                String senha =txtSenha.getText().toString();
+                String confirmar =txtConfirmarSenha.getText().toString();
+                if (nome.equals("") || usuario.equals("") ||
+                        senha.equals("") || confirmar.equals("")){
 
-                if(Senha.equals(Confirmar)){
-                    configurarCallback();
-                    new APIClient().getRestService().setUsuarioDTO("12345", "CRIARUSUARIODTO", Nome, Usuario, Senha, respostaCallback);
-                    // new APIClient().getRestService().setUsuarioLoginDTO("12345", "USUARIOLOGINDTO", Usuario, Senha, respostaCallback);
+                    Toast.makeText(CadastradoActivity.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
 
-                }else{
+                }else {
 
-                    Toast.makeText(CadastradoActivity.this, "Essas senhas não coicidem", Toast.LENGTH_SHORT).show();
-                    txtSenha.setText("");
-                    txtConfirmarSenha.setText("");
+                    if (senha.equals(confirmar)) {
+                        
+                        configurarCallback();
+                        new APIClient().getRestService().setUsuarioDTO("12345", "CRIARUSUARIODTO", nome, usuario, senha, respostaCallback);
+                        // new APIClient().getRestService().setUsuarioLoginDTO("12345", "USUARIOLOGINDTO", Usuario, Senha, respostaCallback);
+                        Intent intent = new Intent(CadastradoActivity.this,LoginActivity.class);
+                        startActivity(intent);
+                        finish();
 
+                    } else {
+
+                        Toast.makeText(CadastradoActivity.this, "Essas senhas não coicidem", Toast.LENGTH_SHORT).show();
+                        txtSenha.setText("");
+                        txtConfirmarSenha.setText("");
+
+                    }
                 }
             }
         });
