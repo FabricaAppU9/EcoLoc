@@ -12,7 +12,7 @@
         android:textAlignment="center"
         android:textSize="21sp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
     <EditText
         android:layout_marginTop="30dp"
@@ -22,7 +22,8 @@
         android:ellipsize="start"
         android:gravity="center"
         android:background="@drawable/rounded_edit_text"
-        android:hint="Nome" />
+        android:hint="Nome"
+        android:id="@+id/edtNomePonto"/>
 
 
     <EditText
@@ -45,7 +46,8 @@
         android:gravity="center"
         android:layout_marginBottom="30dp"
         android:background="@drawable/rounded_edit_text"
-        android:hint="Tipo de Descarte"/>
+        android:hint="Tipo de Descarte"
+        android:id="@+id/edtTipoDescarte"/>
 
     <Button
         android:layout_width="200dp"
@@ -53,6 +55,7 @@
         android:background="@drawable/login_button"
         android:textColor="#FFF"
         android:text="Cadastrar"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:id="@+id/btnCadastrarPonto"/>
 
 </LinearLayout>

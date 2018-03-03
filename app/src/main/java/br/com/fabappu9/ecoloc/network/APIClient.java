@@ -54,5 +54,15 @@ public class APIClient {
                 @Query("SENHA") String senha,
                 Callback<RespostaLogin> callbackResposta
         );
+        @GET("/ponto.php")
+        void setPontoDTO(
+                @Query("CHAVE") String chave,
+                @Query("CHAMADA") String chamada,
+                @Query("DESCRICAO") String nome,
+                @Query("TIPOMATERIAL") String tipomaterial,
+                @Query("LATITUDE") String latitude,
+                @Query("LONGETUDE") String longitude,
+                Callback<Resposta> callbackResposta
+        );
     }
 }

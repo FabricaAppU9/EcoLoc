@@ -148,7 +148,8 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
 
                     Bundle params = new Bundle();
                     params.putString("Endereco", Localizador.encontrarEndereco(getActivity(), latitude, longitude));
-
+                    params.putDouble("Latitude",latitude);
+                    params.putDouble("Longitude",longitude);
                     Intent intent = new Intent(getActivity(), InfoEnderecoActivity.class);
 
                     intent.putExtras(params);
@@ -174,18 +175,13 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                     cadastrarSnippet = Localizador.encontrarEndereco(getActivity(), latLng.latitude, latLng.longitude);
                     mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarSnippet));
                 }
-
             }
         });
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public boolean onMarkerClick(Marker marker) {
-
-
-
         return false;
     }
 }
