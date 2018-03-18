@@ -1,20 +1,31 @@
 package br.com.fabappu9.ecoloc.network;
 
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.util.List;
+
+import br.com.fabappu9.ecoloc.DTO.PontoDto;
 import br.com.fabappu9.ecoloc.Model.Resposta;
 import br.com.fabappu9.ecoloc.Model.RespostaLogin;
-import retrofit.Callback;
-import retrofit.RestAdapter;
-import retrofit.client.OkClient;
-import retrofit.http.GET;
-import retrofit.http.Path;
-import retrofit.http.Query;
+import br.com.fabappu9.ecoloc.Model.RespostaPonto;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.GET;
+//import retrofit.RestAdapter;
+//import retrofit.client.OkClient;
+//import retrofit.http.GET;
+//import retrofit.http.Path;
+import retrofit2.http.Query;
 
 
 
 public class APIClient {
 
-    private static RestAdapter REST_ADAPTER;
+    private static Retrofit REST_ADAPTER;
 
     public APIClient(){
         createAdapterIfNeeded();
@@ -22,11 +33,13 @@ public class APIClient {
 
     private static void createAdapterIfNeeded() {
         if(REST_ADAPTER == null){
-            REST_ADAPTER = new RestAdapter
+            Gson gson = new GsonBuilder()
+                    .setLenient()
+                    .create();
+            REST_ADAPTER = new Retrofit
                     .Builder()
-                    .setEndpoint("http://devjan.esy.es/ws_app/v1")
-                    .setLogLevel(RestAdapter.LogLevel.FULL)
-                    .setClient(new OkClient())
+                    .baseUrl("http://devjan.esy.es/ws_app/v1/")
+                    .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
         }
     }
@@ -37,32 +50,35 @@ public class APIClient {
 
     public interface RestServices{
 
-        @GET("/usuarioDTO.php")
-        void setUsuarioDTO(
+        @GET("usuarioDTO.php")
+        Call<Resposta> setUsuarioDTO(
                 @Query("CHAVE") String chave,
                 @Query("CHAMADA") String chamada,
                 @Query("NOME") String nome,
                 @Query("LOGIN") String login,
-                @Query("SENHA") String senha,
-                Callback<Resposta> callbackResposta
+                @Query("SENHA") String senha
         );
-       @GET("/usuarioDTO.php")
-                void setUsuarioLoginDTO(
+       @GET("usuarioDTO.php")
+       Call<RespostaLogin> setUsuarioLoginDTO(
                 @Query("CHAVE") String chave,
                 @Query("CHAMADA") String chamada,
                 @Query("LOGIN") String login,
-                @Query("SENHA") String senha,
-                Callback<RespostaLogin> callbackResposta
+                @Query("SENHA") String senha
         );
-        @GET("/ponto.php")
-        void setPontoDTO(
+        @GET("ponto.php")
+        Call<RespostaPonto> setPontoDTO(
                 @Query("CHAVE") String chave,
                 @Query("CHAMADA") String chamada,
                 @Query("DESCRICAO") String nome,
                 @Query("TIPOMATERIAL") String tipomaterial,
                 @Query("LATITUDE") String latitude,
-                @Query("LONGETUDE") String longitude,
-                Callback<Resposta> callbackResposta
+                @Query("LONGETUDE") String longitude
+        );
+        @GET("ponto.php")
+        Call<List<PontoDto>> getPontoDTO(
+                @Query("CHAVE") String chave,
+                @Query("CHAMADA") String chamada,
+                @Query("PARAM") String nome
         );
     }
 }

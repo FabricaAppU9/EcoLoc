@@ -7,7 +7,7 @@ package br.com.fabappu9.ecoloc.DTO;
 public class PontoDto {
     private int id;
     private String descricao;
-    private String tipoMaterial;
+    private String tipomaterial;
     private String latitude;
     private String longitude;
 
@@ -28,11 +28,11 @@ public class PontoDto {
     }
 
     public String getTipoMaterial() {
-        return tipoMaterial;
+        return tipomaterial;
     }
 
-    public void setTipoMaterial(String tipoMaterial) {
-        this.tipoMaterial = tipoMaterial;
+    public void setTipoMaterial(String tipomaterial) {
+        this.tipomaterial = tipomaterial;
     }
 
     public String getLatitude() {

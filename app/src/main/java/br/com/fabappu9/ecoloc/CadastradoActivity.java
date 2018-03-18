@@ -3,16 +3,19 @@ package br.com.fabappu9.ecoloc;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import br.com.fabappu9.ecoloc.Model.Resposta;
+import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import br.com.fabappu9.ecoloc.network.APIClient;
-import retrofit.Callback;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
+import retrofit2.Call;
+import retrofit2.Callback;
+//import retrofit2.RetrofitError;
+import retrofit2.Response;
 
 
 public class CadastradoActivity extends AppCompatActivity {
@@ -45,6 +48,7 @@ public class CadastradoActivity extends AppCompatActivity {
                 String usuario =txtUsuario.getText().toString();
                 String senha =txtSenha.getText().toString();
                 String confirmar =txtConfirmarSenha.getText().toString();
+                Call<Resposta> retorno = null;
                 if (nome.equals("") || usuario.equals("") ||
                         senha.equals("") || confirmar.equals("")){
 
@@ -53,10 +57,8 @@ public class CadastradoActivity extends AppCompatActivity {
                 }else {
 
                     if (senha.equals(confirmar)) {
-                        
-                        configurarCallback();
-                        new APIClient().getRestService().setUsuarioDTO("12345", "CRIARUSUARIODTO", nome, usuario, senha, respostaCallback);
-                        // new APIClient().getRestService().setUsuarioLoginDTO("12345", "USUARIOLOGINDTO", Usuario, Senha, respostaCallback);
+                        retorno = new APIClient().getRestService().setUsuarioDTO("12345", "CRIARUSUARIODTO", nome, usuario, senha);
+                        configurarCallback(retorno);
                         Intent intent = new Intent(CadastradoActivity.this,LoginActivity.class);
                         startActivity(intent);
                         finish();
@@ -74,18 +76,26 @@ public class CadastradoActivity extends AppCompatActivity {
 
     }
 
-    private void configurarCallback() {
-        respostaCallback = new Callback<Resposta>() {
+    private void configurarCallback(Call<Resposta> resposta) {
+        resposta.enqueue( new Callback<Resposta>() {
             @Override
-            public void success(Resposta resposta, Response response) {
-                Toast.makeText(CadastradoActivity.this, "Cadastrado com Sucesso!", Toast.LENGTH_SHORT).show();
-
+            public void onResponse(Call<Resposta> call, Response<Resposta> response) {
+                if (!response.isSuccessful()){
+                    Log.e("ERRO:",response.message());
+                }else{
+                    Resposta res = response.body();
+                    if (res.getRETORNO().equals("SUCESSO")){
+                        Toast.makeText(CadastradoActivity.this, "Cadastrado com Sucesso!", Toast.LENGTH_SHORT).show();
+                    }else{
+                        Toast.makeText(CadastradoActivity.this, res.getRETORNO() +" ,não cadastrado" , Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
 
             @Override
-            public void failure(RetrofitError error) {
+            public void onFailure(Call<Resposta> call, Throwable error) {
                 Toast.makeText(CadastradoActivity.this, "Algum erro aconteceu: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        };
+        });
     }
 }

@@ -12,10 +12,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import br.com.fabappu9.ecoloc.Model.Resposta;
+import br.com.fabappu9.ecoloc.Model.RespostaLogin;
+import br.com.fabappu9.ecoloc.Model.RespostaPonto;
 import br.com.fabappu9.ecoloc.network.APIClient;
-import retrofit.Callback;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
+import retrofit2.Call;
+import retrofit2.Callback;
+//import retrofit.RetrofitError;
+import retrofit2.Response;
 
 public class InfoEnderecoActivity extends AppCompatActivity {
 
@@ -59,33 +62,38 @@ public class InfoEnderecoActivity extends AppCompatActivity {
         btnCadastrarPonto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Call<RespostaPonto> resposta = null;
                 if (tipomaterial.getText().toString().equals("") || nome.getText().toString().equals("")){
                     Toast.makeText(InfoEnderecoActivity.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
                 }else {
-                    configurarCallback();
-                    //new APIClient().getRestService().setPontoDTO("12345", "CRIARPONTO,","teste01","pilha","11111","111111", respostaCallback);
-                    new APIClient().getRestService().setPontoDTO("12345", "CRIARPONTO", nome.getText().toString(),tipomaterial.getText().toString(), latitude.toString(), longitude.toString(), respostaCallback);
-                     //new APIClient().getRestService().setUsuarioLoginDTO("12345", "USUARIOLOGINDTO", Usuario, Senha, respostaCallback);
-                    Intent intent = new Intent(InfoEnderecoActivity.this,MainActivity.class);
-                    startActivity(intent);
-                    finish();
+                    resposta = new APIClient().getRestService().setPontoDTO("12345",
+                            "CRIARPONTO",
+                             nome.getText().toString(),
+                             tipomaterial.getText().toString(),
+                             latitude.toString(),
+                             longitude.toString()
+                    );
+                    configurarCallback(resposta);
                 }
             }
         });
     }
-    private void configurarCallback() {
-        respostaCallback = new Callback<Resposta>() {
+    private void configurarCallback(Call<RespostaPonto> resposta) {
+        resposta.enqueue(new Callback<RespostaPonto>() {
             @Override
-            public void success(Resposta resposta, Response response) {
-                Toast.makeText(InfoEnderecoActivity.this, "Cadastrado com Sucesso!", Toast.LENGTH_SHORT).show();
-
+            public void onResponse(Call<RespostaPonto> call, Response<RespostaPonto> response) {
+                Intent intent = new Intent(InfoEnderecoActivity.this,MainActivity.class);
+                startActivity(intent);
+                finish();
             }
 
             @Override
-            public void failure(RetrofitError error) {
+            public void onFailure(Call<RespostaPonto> call, Throwable error) {
                 Toast.makeText(InfoEnderecoActivity.this, "Algum erro aconteceu: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        };
+
+
+        });
     }
 
 }
