@@ -4,118 +4,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/txtNomeUsuario"
-        android:layout_width="218dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="8dp"
-        android:text="Guilherme Golfetto"
-        android:textAlignment="center"
-        android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+    android:orientation="vertical"
+    tools:context="br.com.fabappu9.ecoloc.CadastradoActivity">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/profile_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_centerHorizontal="true"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="99dp"
+        android:layout_gravity="center"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/modelo"
-        app:civ_border_color="@color/colorPrimary"
-        app:civ_border_width="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        android:src="@drawable/ecoloc"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17000002" />
+
+
+    <EditText
+        android:id="@+id/txtNome"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edit_text"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="Nome"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.060000002" />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="300dp"
-        android:layout_height="49dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_edit_text"
-        android:ellipsize="start"
-        android:enabled="false"
-        android:gravity="center"
-        android:hint="23 Anos"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
-
-    <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txtUsuario"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edit_text"
         android:ellipsize="start"
-        android:enabled="false"
         android:gravity="center"
-        android:hint="154 Pontos Cadastrados"
+        android:hint="Usuário"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.90"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <EditText
+        android:id="@+id/txtSenha"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edit_text"
         android:ellipsize="start"
-        android:enabled="false"
         android:gravity="center"
-        android:hint="Localidade Favorita: São Paulo"
-        android:inputType="text"
+        android:hint="Senha"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.69" />
+        app:layout_constraintVertical_bias="0.55" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txtConfirmarSenha"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="24dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edit_text"
         android:ellipsize="start"
-        android:enabled="false"
         android:gravity="center"
-        android:hint="Descarte Favorito: Plástico"
-        android:inputType="text"
+        android:hint="Confirme a senha"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintVertical_bias="0.80" />
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/cadastrar_button"
+        android:text="Cadastrar"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.80" />
 
 
 </android.support.constraint.ConstraintLayout>
+
