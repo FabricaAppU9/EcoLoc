@@ -5,17 +5,17 @@ package br.com.fabappu9.ecoloc.DTO;
  */
 
 public class PontoDto {
-    private int id;
+    private String id;
     private String descricao;
     private String tipomaterial;
     private String latitude;
     private String longitude;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

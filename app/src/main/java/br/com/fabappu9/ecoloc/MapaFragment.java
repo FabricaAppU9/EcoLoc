@@ -40,6 +40,16 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
+import java.util.List;
+
+import br.com.fabappu9.ecoloc.DTO.PontoDto;
+import br.com.fabappu9.ecoloc.network.APIClient;
+import br.com.fabappu9.ecoloc.network.APILocation;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import android.widget.Toast;
+
 import static android.content.Context.LOCATION_SERVICE;
 
 /**
@@ -63,6 +73,8 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
     public static final int CONSTANTE_TELA_1 = 1;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor sharedPrefEditor;
+    private List<PontoDto> pontos;
+    private APILocation location;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -129,9 +141,15 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
         mGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
         mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
-        //mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(-23.768482, -46.705502)).title("Minha ultima posição com sinal").snippet("Testando map fragment"));
+        Call<List<PontoDto>> retorno = null;
+        retorno = new APIClient().getRestService().getPontoDTO("12345", "GETPONTOS", "");
+        configurarCallback(retorno,mGoogleMap);
+       // APILocation location=new APILocation();
+       // location.callLocalization();
+        //mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(-23.759310021069908, -46.79334104061127)).title("Minha ultima posição com sinal").snippet("Testando map fragment"));
+        mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(-23.5489, -46.6388)).title("Minha ultima posição com sinal").snippet("Testando map fragment"));
 
-        CameraPosition cameraPosition = CameraPosition.builder().target(new LatLng(-23.652863, -46.711486)).zoom(16).bearing(0).tilt(4).build();
+        CameraPosition cameraPosition = CameraPosition.builder().target(new LatLng(-23.5489, -46.6388)).zoom(9).bearing(0).tilt(4).build();
 
         mGoogleMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
@@ -183,5 +201,31 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
     @Override
     public boolean onMarkerClick(Marker marker) {
         return false;
+    }
+
+    private void configurarCallback(Call<List<PontoDto>> retorno,GoogleMap map ) {
+
+        retorno.enqueue(new Callback<List<PontoDto>>() {
+            @Override
+            public void onResponse(Call<List<PontoDto>> call, Response<List<PontoDto>> response) {
+                if (!response.isSuccessful()) {
+                    Log.e("ERRO:", response.message());
+                } else {
+                    pontos =  response.body();
+                    for(int i=0;i<pontos.size();i++){
+
+                        mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(Double.parseDouble(pontos.get(i).getLatitude()),Double.parseDouble(pontos.get(i).getLongitude())))
+                                .title(pontos.get(i).getDescricao()).snippet(pontos.get(i).getTipoMaterial()))
+                        ;
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<PontoDto>> call, Throwable error) {
+                //Toast.makeText(MapaFragment.this, "Deu Ruim: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }

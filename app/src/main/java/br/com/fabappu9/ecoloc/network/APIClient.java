@@ -10,6 +10,8 @@ import br.com.fabappu9.ecoloc.DTO.PontoDto;
 import br.com.fabappu9.ecoloc.Model.Resposta;
 import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import br.com.fabappu9.ecoloc.Model.RespostaPonto;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
@@ -36,10 +38,13 @@ public class APIClient {
             Gson gson = new GsonBuilder()
                     .setLenient()
                     .create();
+            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+            OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
             REST_ADAPTER = new Retrofit
                     .Builder()
                     .baseUrl("http://devjan.esy.es/ws_app/v1/")
-                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .client(client)
                     .build();
         }
     }

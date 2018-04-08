@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\julio\Documents\Git\EcoLoc\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="759341cfd59877820ce76a7ea8afed19bef4b874">
-        <dex dex="C:\Users\julio\Documents\Git\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_217c410a17678a3101f726e75d836aabed5c56e7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\julio\Documents\Git\EcoLoc\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="D:\Projetos\2-Android\EcoLoc\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\julio\Documents\Git\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_66f18c411408c2cd7d207f1d2e193fff8fdb004e\classes.dex" />
+        <dex dex="D:\Projetos\2-Android\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_68895b617906cfa32a8072eaf65f29da1e277d09\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Projetos\2-Android\EcoLoc\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="97b41085deafb3032a285d67cbe75e89c68447f1">
+        <dex dex="D:\Projetos\2-Android\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4c0343f7915b27e7c70e21682bbcc6b6f2fb7828\classes.dex" />
     </item>
 
 </items>

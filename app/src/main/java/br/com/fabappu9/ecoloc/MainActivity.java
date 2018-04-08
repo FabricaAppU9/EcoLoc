@@ -12,7 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.widget.Toast;
+
 
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
@@ -23,19 +23,15 @@ import br.com.fabappu9.ecoloc.DTO.PontoDto;
 import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import br.com.fabappu9.ecoloc.Permissoes.Permissoes;
 import br.com.fabappu9.ecoloc.network.APIClient;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-    public List<PontoDto> pontos;
+
    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       Call<List<PontoDto>> retorno = null;
-       retorno = new APIClient().getRestService().getPontoDTO("12345", "GETPONTOS", "");
-       configurarCallback(retorno);
+
+
 
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
@@ -59,28 +55,7 @@ public class MainActivity extends AppCompatActivity {
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
         bottomBar.setDefaultTabPosition(R.id.mapa);
     }
-    private void configurarCallback(Call<List<PontoDto>> retorno ) {
-        retorno.enqueue(new Callback<List<PontoDto>>() {
-            @Override
-            public void onResponse(Call<List<PontoDto>> call, Response<List<PontoDto>> response) {
-                if (!response.isSuccessful()) {
-                    Log.e("ERRO:", response.message());
-                } else {
-                    pontos = (List<PontoDto>) response.body();
 
-                    Toast.makeText(MainActivity.this, pontos.size(), Toast.LENGTH_SHORT).show();
-                }
-
-
-            }
-
-            @Override
-            public void onFailure(Call<List<PontoDto>> call, Throwable error) {
-                Toast.makeText(MainActivity.this, "Deu Ruim: " + error.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
 }
 
 
