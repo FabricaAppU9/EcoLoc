@@ -1,6 +1,7 @@
 package br.com.fabappu9.ecoloc;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,12 +9,14 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import br.com.fabappu9.ecoloc.Model.Resposta;
 import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import br.com.fabappu9.ecoloc.Permissoes.Permissoes;
+import br.com.fabappu9.ecoloc.data.SharedPreferenceHelper;
 import retrofit2.Call;
 import retrofit2.Callback;
 //import retrofit2.RetrofitError;
@@ -28,38 +31,48 @@ public class LoginActivity extends AppCompatActivity {
     private Button cadastrar;
     private Button login;
     private Callback<RespostaLogin> respostaCallback;
+    CheckBox checkBox;
+    String Usuario;
+    String Senha;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         Permissoes permissoes = new Permissoes();
         permissoes.setMyPermissionsRequestAccessFineLocation(LoginActivity.this);
-
         cadastrar  = (Button) findViewById(R.id.CadastrarButton);
+        checkBox = (CheckBox) findViewById(R.id.check_lembre_me);
+        user = (TextView) findViewById(R.id.txtLoginUser);
+        pass = (TextView) findViewById(R.id.txtLoginPass);
 
+        SharedPreferenceHelper sharedPreferenceHelper = new SharedPreferenceHelper(LoginActivity.this);
+        if (sharedPreferenceHelper.getCheckLogin()){
+            user.setText(sharedPreferenceHelper.getUsuarioLogin());
+            pass.setText(sharedPreferenceHelper.getSenhaLogin());
+            checkBox.setChecked(true);
+        }
         cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(LoginActivity.this, CadastradoActivity.class);
                 startActivity(intent1);
-                finish();
+
 
             }
         });
 
 
         login  = (Button) findViewById(R.id.LoginButton);
-        user = (TextView) findViewById(R.id.txtLoginUser);
-        pass = (TextView) findViewById(R.id.txtLoginPass);
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String Usuario = user.getText().toString();
-                String Senha = pass.getText().toString();
+                Usuario = user.getText().toString();
+                Senha = pass.getText().toString();
 
                 Call<RespostaLogin> retorno = null;
                 if (TextUtils.isEmpty(Usuario) || TextUtils.isEmpty(Senha)) {
@@ -81,6 +94,12 @@ public class LoginActivity extends AppCompatActivity {
                 }else{
                     RespostaLogin login = response.body();
                     if (login.getRETORNO().equals("SUCESSO")){
+                        SharedPreferenceHelper sharedPreferenceHelper = new SharedPreferenceHelper(LoginActivity.this);
+                        if (isCheck()){
+                            sharedPreferenceHelper.setLogin(Usuario,Senha);
+                        }else{
+                            sharedPreferenceHelper.setCheckLogin();
+                        }
                         Intent intent1 = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent1);
                         finish();
@@ -97,6 +116,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
+    public boolean isCheck(){
+        return  checkBox.isChecked();
+    }
 
 }

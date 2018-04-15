@@ -1,0 +1,57 @@
+package br.com.fabappu9.ecoloc.data;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.util.Log;
+
+/**
+ * Created by andre on 15/04/2018.
+ */
+
+
+public class SharedPreferenceHelper {
+
+    Context context;
+    SharedPreferences sharedPreferences;
+    static final String CHAVE_USUARIO = "usuario";
+    static final String CHAVE_SENHA = "senha";
+    static final String CHAVE_CHECK = "check";
+    static final String CHAVE_FILE_LOGIN = "check";
+
+    public SharedPreferenceHelper(Context context) {
+        this.context = context;
+    }
+
+    public void setLogin(String usuario, String senha) {
+        sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(CHAVE_CHECK, true);
+        editor.putString(CHAVE_USUARIO, usuario);
+        editor.putString(CHAVE_SENHA, senha);
+        editor.commit();
+        Log.e("shared", sharedPreferences.getString("usuario", "erro"));
+    }
+
+    public String getUsuarioLogin(){
+        sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
+        return sharedPreferences.getString(CHAVE_USUARIO, "");
+    }
+
+    public String getSenhaLogin(){
+        sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
+        return sharedPreferences.getString(CHAVE_SENHA, "");
+    }
+
+    public boolean getCheckLogin(){
+        sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
+        return sharedPreferences.getBoolean(CHAVE_CHECK, false);
+    }
+
+    public void setCheckLogin(){
+        sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(CHAVE_CHECK,false);
+        editor.commit();
+    }
+
+}
