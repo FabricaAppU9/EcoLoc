@@ -17,6 +17,7 @@ import br.com.fabappu9.ecoloc.Model.Resposta;
 import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import br.com.fabappu9.ecoloc.Permissoes.Permissoes;
 import br.com.fabappu9.ecoloc.data.SharedPreferenceHelper;
+import dmax.dialog.SpotsDialog;
 import retrofit2.Call;
 import retrofit2.Callback;
 //import retrofit2.RetrofitError;
@@ -47,12 +48,14 @@ public class LoginActivity extends AppCompatActivity {
         checkBox = (CheckBox) findViewById(R.id.check_lembre_me);
         user = (TextView) findViewById(R.id.txtLoginUser);
         pass = (TextView) findViewById(R.id.txtLoginPass);
+        login  = (Button) findViewById(R.id.LoginButton);
 
         SharedPreferenceHelper sharedPreferenceHelper = new SharedPreferenceHelper(LoginActivity.this);
         if (sharedPreferenceHelper.getCheckLogin()){
             user.setText(sharedPreferenceHelper.getUsuarioLogin());
             pass.setText(sharedPreferenceHelper.getSenhaLogin());
             checkBox.setChecked(true);
+            login.callOnClick();
         }
         cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
-        login  = (Button) findViewById(R.id.LoginButton);
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,9 +81,9 @@ public class LoginActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(Usuario) || TextUtils.isEmpty(Senha)) {
                     Toast.makeText(LoginActivity.this, "Campo usuario ou senha em branco.", Toast.LENGTH_SHORT).show();
                 } else {
-
                     retorno = new APIClient().getRestService().setUsuarioLoginDTO("12345", "GETLOGARUSUARIO", Usuario, Senha);
                     configurarCallback(retorno);
+
                 }
             }
         });
@@ -89,6 +92,12 @@ public class LoginActivity extends AppCompatActivity {
         retorno.enqueue(new Callback<RespostaLogin>() {
             @Override
             public void onResponse(Call<RespostaLogin> call, Response<RespostaLogin> response) {
+
+                try {
+                    new Thread().sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 if (!response.isSuccessful()){
                     Log.e("ERRO:",response.message());
                 }else{
@@ -107,6 +116,8 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, login.getRETORNO() +" ,Verifique usuário e senha" , Toast.LENGTH_SHORT).show();
                     }
                 }
+
+
             }
 
             @Override

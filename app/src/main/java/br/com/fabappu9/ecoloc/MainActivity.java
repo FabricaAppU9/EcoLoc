@@ -3,6 +3,7 @@ package br.com.fabappu9.ecoloc;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.IdRes;
@@ -23,6 +24,7 @@ import br.com.fabappu9.ecoloc.DTO.PontoDto;
 import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import br.com.fabappu9.ecoloc.Permissoes.Permissoes;
 import br.com.fabappu9.ecoloc.network.APIClient;
+import dmax.dialog.SpotsDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 }else if(tabId == R.id.perfil){
                     fragment = new PerfilFragment();
                 }
-
                 getFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
 
             }

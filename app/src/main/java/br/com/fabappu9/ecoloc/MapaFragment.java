@@ -45,6 +45,7 @@ import java.util.List;
 import br.com.fabappu9.ecoloc.DTO.PontoDto;
 import br.com.fabappu9.ecoloc.network.APIClient;
 import br.com.fabappu9.ecoloc.network.APILocation;
+import dmax.dialog.SpotsDialog;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -116,6 +117,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
         return mView;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
@@ -141,6 +143,8 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
         mGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
         mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
+        SpotsDialog dialog = new SpotsDialog(getContext());
+        dialog.show();
         Call<List<PontoDto>> retorno = null;
         retorno = new APIClient().getRestService().getPontoDTO("12345", "GETPONTOS", "");
         configurarCallback(retorno,mGoogleMap);
@@ -152,7 +156,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
         CameraPosition cameraPosition = CameraPosition.builder().target(new LatLng(-23.5489, -46.6388)).zoom(9).bearing(0).tilt(4).build();
 
         mGoogleMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-
+        dialog.dismiss();
         mGoogleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
@@ -211,6 +215,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                 if (!response.isSuccessful()) {
                     Log.e("ERRO:", response.message());
                 } else {
+
                     pontos =  response.body();
                     for(int i=0;i<pontos.size();i++){
 
@@ -218,6 +223,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                                 .title(pontos.get(i).getDescricao()).snippet(pontos.get(i).getTipoMaterial()))
                         ;
                     }
+
                 }
             }
 
