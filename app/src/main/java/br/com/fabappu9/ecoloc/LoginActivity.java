@@ -15,17 +15,18 @@ import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import br.com.fabappu9.ecoloc.Permissoes.Permissoes;
 import br.com.fabappu9.ecoloc.data.SharedPreferenceHelper;
 import br.com.fabappu9.ecoloc.network.APIClient;
+import dmax.dialog.SpotsDialog;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-//import retrofit2.RetrofitError;
 
 public class LoginActivity extends AppCompatActivity {
     private TextView user;
     private TextView pass;
     private Button cadastrar;
     private Button login;
+    private SpotsDialog dialog;
     private Callback<RespostaLogin> respostaCallback;
     CheckBox checkBox;
     String Usuario;
@@ -37,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        dialog = new SpotsDialog(this);
         Permissoes permissoes = new Permissoes();
         permissoes.setMyPermissionsRequestAccessFineLocation(LoginActivity.this);
         cadastrar  = (Button) findViewById(R.id.CadastrarButton);
@@ -57,28 +59,24 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(LoginActivity.this, CadastradoActivity.class);
                 startActivity(intent1);
-
-
             }
         });
-
-
 
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                dialog.show();
                 Usuario = user.getText().toString();
                 Senha = pass.getText().toString();
 
                 Call<RespostaLogin> retorno = null;
                 if (TextUtils.isEmpty(Usuario) || TextUtils.isEmpty(Senha)) {
                     Toast.makeText(LoginActivity.this, "Campo usuario ou senha em branco.", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
                 } else {
                     retorno = new APIClient().getRestService().setUsuarioLoginDTO("12345", "GETLOGARUSUARIO", Usuario, Senha);
                     configurarCallback(retorno);
-
                 }
             }
         });
@@ -87,12 +85,11 @@ public class LoginActivity extends AppCompatActivity {
         retorno.enqueue(new Callback<RespostaLogin>() {
             @Override
             public void onResponse(Call<RespostaLogin> call, Response<RespostaLogin> response) {
-
-                try {
+               /* try {
                     new Thread().sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
+                }*/
                 if (!response.isSuccessful()){
                     Log.e("ERRO:",response.message());
                 }else{
@@ -106,18 +103,19 @@ public class LoginActivity extends AppCompatActivity {
                         }
                         Intent intent1 = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent1);
+                        dialog.dismiss();
                         finish();
                     }else{
                         Toast.makeText(LoginActivity.this, login.getRETORNO() +" ,Verifique usuário e senha" , Toast.LENGTH_SHORT).show();
                     }
                 }
-
-
+                dialog.dismiss();
             }
 
             @Override
             public void onFailure(Call<RespostaLogin> call, Throwable error) {
                 Toast.makeText(LoginActivity.this, "Deu Ruim: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
             }
         });
     }
