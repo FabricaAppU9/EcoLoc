@@ -3,39 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Programador\.android\build-cache\c19de0912bf21400c79bb05a06519fe3a7c94ea6\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bf94678214d9ab43a8deb5df90d0b3e6d619ff1e">
-        <dex dex="D:\Projetos\2-Android\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d931c9147c6a19c469142df79128df75d655196a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\Projetos\2-Android\EcoLoc\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a6da9a7a911ef40959157daaf39b4a6e1a3e703b">
-        <dex dex="D:\Projetos\2-Android\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4c0343f7915b27e7c70e21682bbcc6b6f2fb7828\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\Projetos\2-Android\EcoLoc\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="/home/julio/Git/EcoLoc/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="D:\Projetos\2-Android\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_68895b617906cfa32a8072eaf65f29da1e277d09\classes.dex" />
+        <dex dex="/home/julio/Git/EcoLoc/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_36876b067143274441f785bfe0dd91bb5b5a26e6/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Programador\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.4.1\381fc1096ba65040d8e80ea43b2e1d9bad02345e\logging-interceptor-3.4.1.jar"
-        jumboMode="false"
+        jar="/home/julio/.android/build-cache/8cfd57f95da3b7fbdb299a9121611725ef2c3fd7/output/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="381fc1096ba65040d8e80ea43b2e1d9bad02345e">
-        <dex dex="D:\Projetos\2-Android\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\logging-interceptor-3.4.1_7d95b9e220b4b3bcc7d5e469a30ad1f24c154336\classes.dex" />
+        sha1="bf94678214d9ab43a8deb5df90d0b3e6d619ff1e">
+        <dex dex="/home/julio/Git/EcoLoc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_90f2049ca186055d7f942cc9c02a248c960c346f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/julio/Git/EcoLoc/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ae759d7d1e0145deadb7e50e0af67cabe5517579">
+        <dex dex="/home/julio/Git/EcoLoc/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_05e8de5ec3d356697bf5555fce08ae9c04b65cc4/classes.dex" />
     </item>
 
 </items>

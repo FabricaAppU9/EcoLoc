@@ -3,6 +3,7 @@ package br.com.fabappu9.ecoloc;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.Layout;
@@ -18,15 +19,19 @@ import com.google.android.gms.maps.MapFragment;
  */
 
 public class PerfilFragment extends Fragment {
-
-
+    private View view =null;
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
-
-
-        View v = inflater.inflate(R.layout.perfil, container, false);
-
-
-
-        return v;
+        if(view == null)
+            view= inflater.inflate(R.layout.perfil, container, false);
+        return view;
     }
-}
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        MapaFragment.RetainedFragment fragment = (MapaFragment.RetainedFragment) getFragmentManager().findFragmentByTag("work");
+
+        if (fragment != null) {
+            fragment.setTargetFragment(this, 0);
+        }
+    }}

@@ -1,10 +1,8 @@
 package br.com.fabappu9.ecoloc;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.nfc.Tag;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -13,18 +11,15 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import br.com.fabappu9.ecoloc.Model.Resposta;
 import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import br.com.fabappu9.ecoloc.Permissoes.Permissoes;
 import br.com.fabappu9.ecoloc.data.SharedPreferenceHelper;
-import dmax.dialog.SpotsDialog;
+import br.com.fabappu9.ecoloc.network.APIClient;
 import retrofit2.Call;
 import retrofit2.Callback;
-//import retrofit2.RetrofitError;
 import retrofit2.Response;
-import br.com.fabappu9.ecoloc.network.APIClient;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+
+//import retrofit2.RetrofitError;
 
 public class LoginActivity extends AppCompatActivity {
     private TextView user;
