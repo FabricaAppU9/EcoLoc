@@ -7,13 +7,13 @@ import com.google.gson.GsonBuilder;
 import java.util.List;
 
 import br.com.fabappu9.ecoloc.DTO.PontoDto;
+import br.com.fabappu9.ecoloc.DTO.UsuarioDto;
 import br.com.fabappu9.ecoloc.Model.Resposta;
 import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import br.com.fabappu9.ecoloc.Model.RespostaPonto;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
-import retrofit2.Callback;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
@@ -22,7 +22,6 @@ import retrofit2.http.GET;
 //import retrofit.http.GET;
 //import retrofit.http.Path;
 import retrofit2.http.Query;
-
 
 
 public class APIClient {

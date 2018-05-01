@@ -11,6 +11,9 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
+import br.com.fabappu9.ecoloc.DTO.UsuarioDto;
 import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import br.com.fabappu9.ecoloc.Permissoes.Permissoes;
 import br.com.fabappu9.ecoloc.data.SharedPreferenceHelper;
@@ -27,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
     private Button cadastrar;
     private Button login;
     private SpotsDialog dialog;
-    private Callback<RespostaLogin> respostaCallback;
     CheckBox checkBox;
     String Usuario;
     String Senha;
@@ -97,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
                     if (login.getRETORNO().equals("SUCESSO")){
                         SharedPreferenceHelper sharedPreferenceHelper = new SharedPreferenceHelper(LoginActivity.this);
                         if (isCheck()){
-                            sharedPreferenceHelper.setLogin(Usuario,Senha);
+                            sharedPreferenceHelper.setLogin(login.getLOGIN(),login.getSENHA(), login.getNOME(), login.getFOTO(), login.getID());
                         }else{
                             sharedPreferenceHelper.setCheckLogin();
                         }

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
+import okhttp3.internal.cache.DiskLruCache;
+
 /**
  * Created by andre on 15/04/2018.
  */
@@ -17,17 +19,23 @@ public class SharedPreferenceHelper {
     static final String CHAVE_SENHA = "senha";
     static final String CHAVE_CHECK = "check";
     static final String CHAVE_FILE_LOGIN = "check";
+    static final String CHAVE_NOME = "nome";
+    static final String CHAVE_FOTO =  "foto";
+    static final String CHAVE_ID = "-1";
 
     public SharedPreferenceHelper(Context context) {
         this.context = context;
     }
 
-    public void setLogin(String usuario, String senha) {
+    public void setLogin(String usuario, String senha, String nome, String foto,String id) {
         sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(CHAVE_CHECK, true);
         editor.putString(CHAVE_USUARIO, usuario);
         editor.putString(CHAVE_SENHA, senha);
+        editor.putString(CHAVE_NOME, nome);
+        editor.putString(CHAVE_FOTO, foto);
+        editor.putString(CHAVE_ID,id);
         editor.commit();
         Log.e("shared", sharedPreferences.getString("usuario", "erro"));
     }

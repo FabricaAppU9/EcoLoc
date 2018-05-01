@@ -5,16 +5,17 @@ package br.com.fabappu9.ecoloc.DTO;
  */
 
 public class UsuarioDto {
-    private int id;
+    private String id;
     private String login;
     private String senha;
     private String nome;
+    private String foto;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -40,5 +41,13 @@ public class UsuarioDto {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 }
