@@ -3,30 +3,903 @@
 
     <item
         is-multidex="true"
-        jar="/home/julio/Git/EcoLoc/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="C:\Users\andrevieira\.android\build-cache\8f90fa6ca3e02264ed9fd76eab229e5d5da86db6\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/home/julio/Git/EcoLoc/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_36876b067143274441f785bfe0dd91bb5b5a26e6/classes.dex" />
+        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_989f2c3209c94f3e8ef912666c99940dfd9fdb8e\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/julio/.android/build-cache/8cfd57f95da3b7fbdb299a9121611725ef2c3fd7/output/jars/classes.jar"
+        jar="C:\Users\andrevieira\.android\build-cache\f736fb4a38a5108de55187158810fd323c30151f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="697679619b00837e3d09e9988a2e1e2a9009d502">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2b68ec7c31c85bb75bd967875847dcf74c0703b8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b55ffa9ae89f1cde8c9182906eebc11f909af554\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3aa967907977976a47a80df16bb38fb2fd50cda4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.14.0\102d7be47241d781ef95f1581d414b0943053130\okio-1.14.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="102d7be47241d781ef95f1581d414b0943053130">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.14.0_354fe22fe14bd0d9684fc2395853826741f9f145\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\a2cbf2c6ac034f65a0dbc14ef9332cde9bbd57ce\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="af6ee25641df3142059c0828517aa7ee6eba08d6">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ddbecd16749855e44600ae7bebc9e857f231391c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.4.0\fc4aa382632bfaa7be7b41579efba41d5a71ecf3\retrofit-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fc4aa382632bfaa7be7b41579efba41d5a71ecf3">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.4.0_1cb907d6a82e5025c5594743d21f140ef093ab08\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\4fff64f22398a4374e321354f1bca557fe920942\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="bf94678214d9ab43a8deb5df90d0b3e6d619ff1e">
-        <dex dex="/home/julio/Git/EcoLoc/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_90f2049ca186055d7f942cc9c02a248c960c346f/classes.dex" />
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a16059b19091052e39e5adb08957cb8d60e82923\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/julio/Git/EcoLoc/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="C:\Users\andrevieira\.android\build-cache\b0782eaa7fcfadd52da5aa91730173eeebacb7a6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="345a1b5cf5b144ce18ba6962bc66a7e2f26c1c1b">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_11565ee02eb6028a7608ab8a9c2a89d430b86cb1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\c1d243a4687f51de89af22145ebe2d8819580a91\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_60e776884d392aa86dc970ff8ae0e5fb70f88d45\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\c42f233c9d498885ddb0d0af427433215ac70453\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9c9bdb4b2497465a6cf7d5e8f57c5298f828a380">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5dadeb0c9e04e36fc015516a900f52f549d2a204\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b041adbd8748e8a2d7d3aaeeeac0b38cddce5a23\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ae759d7d1e0145deadb7e50e0af67cabe5517579">
-        <dex dex="/home/julio/Git/EcoLoc/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_05e8de5ec3d356697bf5555fce08ae9c04b65cc4/classes.dex" />
+        sha1="6d9ed9a288364688e7fcf6704776284dac1eb42e">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a57f46dbc787083579677c9cd79bc8a60ab0f7aa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\86913dc1b0096eb83b555243577a3a8ee5d61d82\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a1897426566e408a5c20a3d931f77d89771d07f">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_171905914714db7973c1d04d729db41c56ec93a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\c42f233c9d498885ddb0d0af427433215ac70453\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9c9bdb4b2497465a6cf7d5e8f57c5298f828a380">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5dadeb0c9e04e36fc015516a900f52f549d2a204\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.4.0\fc4aa382632bfaa7be7b41579efba41d5a71ecf3\retrofit-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fc4aa382632bfaa7be7b41579efba41d5a71ecf3">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.4.0_1cb907d6a82e5025c5594743d21f140ef093ab08\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b645876cd42e9006f28eb716b352f75a5101a5a2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e70a3fed299d84cd868614e11021664d72b8e488">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_54838edf0765f8bf4a95ef5ceb5549fb683cc219\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.2\3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf\gson-2.8.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.8.2_fc79f223e7269e789b16514820563c84c561b91f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\deab6a31190764fa087f26e6ffdf3a9bf51eea29\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a9682ecaed51724ff5374f6dd4649bcac223630f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\3b83d9a8e008fa5e41b7eed02a174766b721878d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fd76d95678a6b2b8a49bb8a9fb5bcef7aedb70e7">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_68c05ced01392cfbd37bfd2f99bea39e45b35f17\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.14.0\102d7be47241d781ef95f1581d414b0943053130\okio-1.14.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="102d7be47241d781ef95f1581d414b0943053130">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.14.0_354fe22fe14bd0d9684fc2395853826741f9f145\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b07c1f616c6aae1b7c3c6180cea682bba4853a86\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="58adcfbe2c8393765e84c5489d01bba6a5159eb2">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b215b4d7f33766678f9615015cf56694f7ac9997\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\0bf4531673fb04c9cecbc1e02e32ff3510565285\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b000ecceb9877fefcdc7ab1959ff03df91551656">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d25aea344246fdf2646a2978f2e1c0f3a8695334\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\a8e65f0279811bcb3efb1330573352bb62e4d4fd\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ec3360994c4007c282a4b651723603e82682b601">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0f54039c293f6243be94e7010cf1bcec6c776759\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\6f1244bae7809d7c7df3cd6b81a63af177898ae5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2c6fcd6267cbac6509a2e72a61127534a1d616cf">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b053a38a257c7352478841c62fb4a0d43a4b2335\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\a664a22766297fcf2e9dcbc9062093a74ade742f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ff56462e2a1f48764ec2d8b9a3971c2eaf5bb587\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\a2cbf2c6ac034f65a0dbc14ef9332cde9bbd57ce\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="af6ee25641df3142059c0828517aa7ee6eba08d6">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ddbecd16749855e44600ae7bebc9e857f231391c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\c3e8b84daa2d9f57a75bf53395e23d41ac75da7b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b8df1b1e51fe14b0e89b3845dc2e215a024a09f">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d44737376c127e5aa21d275f50a8529f68e39577\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\c57ae3aa98669cc15aec191994e4f50d796164a4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="744c49c02a27569cc4cc049685d3649e4ef439f2">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_abbdaf58db3eec1902ce457b1adc508fcfb5dcc6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b0782eaa7fcfadd52da5aa91730173eeebacb7a6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="345a1b5cf5b144ce18ba6962bc66a7e2f26c1c1b">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_11565ee02eb6028a7608ab8a9c2a89d430b86cb1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\dc7f0178822f2dd39acca76500f83c205aed4fc6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cb4af597d079ffdc0984a3ec2c03cbf6a1b9f869">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a6e865cefb07e040cff8a895e2706380b1aab622\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\3a37a472efc1d5613605e8e66bea31c91cd03330\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="27775d59b16610ac76f1b83693fedd9520396332">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ed78b9c114828f781512d023a000fa9330595172\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b55ffa9ae89f1cde8c9182906eebc11f909af554\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3aa967907977976a47a80df16bb38fb2fd50cda4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\d52fdc8eddda7355bc9fbcb8261a37c10fab4577\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="77f9593d979f4347344be233bd0d888315f79517">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_580635cf188c88325cbff15693e497ab3c8abbfb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e260693fd5714969fff65096491250e0dd2a2bb9">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_03baf8a29a6af365e0b978dc42cbd30f8dda02b2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\3a37a472efc1d5613605e8e66bea31c91cd03330\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="27775d59b16610ac76f1b83693fedd9520396332">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ed78b9c114828f781512d023a000fa9330595172\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\c1d243a4687f51de89af22145ebe2d8819580a91\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_60e776884d392aa86dc970ff8ae0e5fb70f88d45\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.2\3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf\gson-2.8.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.8.2_fc79f223e7269e789b16514820563c84c561b91f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b95b1841d7301691abe54047e2dfc4a7a9d0e800\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0c3e81d3eb86b86d194b5cdb6a4de78203f6f7fd">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_661cd1408a68e4b3eb0f5111d29bb529ffc01b9a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\c3e8b84daa2d9f57a75bf53395e23d41ac75da7b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b8df1b1e51fe14b0e89b3845dc2e215a024a09f">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d44737376c127e5aa21d275f50a8529f68e39577\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\2652997432e19eb3b28f5e7847095486a6382557\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_984ca053594c7711064f7c95213894546b793d83\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\6f1244bae7809d7c7df3cd6b81a63af177898ae5\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2c6fcd6267cbac6509a2e72a61127534a1d616cf">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b053a38a257c7352478841c62fb4a0d43a4b2335\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\298e163cd451ec6d029745b85c2a2c807f4a7402\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="eb576427887e497cd958a475475f9206e38dc314">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c051f901da053398751b3688bf7beaa2b4a4ff5c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\0bf4531673fb04c9cecbc1e02e32ff3510565285\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b000ecceb9877fefcdc7ab1959ff03df91551656">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d25aea344246fdf2646a2978f2e1c0f3a8695334\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\dc7f0178822f2dd39acca76500f83c205aed4fc6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cb4af597d079ffdc0984a3ec2c03cbf6a1b9f869">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a6e865cefb07e040cff8a895e2706380b1aab622\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\d52fdc8eddda7355bc9fbcb8261a37c10fab4577\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="77f9593d979f4347344be233bd0d888315f79517">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_580635cf188c88325cbff15693e497ab3c8abbfb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b8190c60e739cfbebe1d23ecdee9572a9b0d7df7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9aedc597d74c6d77258ce5236e9abff0c3cc65e3">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_76ca506da369598e3a163adb7c08a48a46522df6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b07c1f616c6aae1b7c3c6180cea682bba4853a86\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="58adcfbe2c8393765e84c5489d01bba6a5159eb2">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b215b4d7f33766678f9615015cf56694f7ac9997\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\2652997432e19eb3b28f5e7847095486a6382557\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_984ca053594c7711064f7c95213894546b793d83\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\298e163cd451ec6d029745b85c2a2c807f4a7402\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="eb576427887e497cd958a475475f9206e38dc314">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c051f901da053398751b3688bf7beaa2b4a4ff5c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\22de7fd4613dcb3fd3b69dae10d918354d6a9b1c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c849cdddeaaaad96e6c61e9ccbc88be0e8f02542\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\aa0398994bb089db775337a034cd716c083cde4e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0af4f577b4a21eb9be2a7f52e33b077b67e6d9f8">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1f4e2cb19eebecbed97eb667c84692939cd1c0e1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\57d6e00729c4c5b547f3813c40f0c0dcadf02743\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3f53951ba32a834e6a070fd76213338bc7d4a07d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.4.1\381fc1096ba65040d8e80ea43b2e1d9bad02345e\logging-interceptor-3.4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="381fc1096ba65040d8e80ea43b2e1d9bad02345e">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\logging-interceptor-3.4.1_72cd3c4cb33f35b9245d65b6e26071bb2457f435\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\a8e65f0279811bcb3efb1330573352bb62e4d4fd\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ec3360994c4007c282a4b651723603e82682b601">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0f54039c293f6243be94e7010cf1bcec6c776759\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.4.0\15d7790ee311d961379c51b00aba12d5967cb7ea\converter-gson-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15d7790ee311d961379c51b00aba12d5967cb7ea">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.4.0_e3dc25c92c2062f3df169ba6c25b5299f0b5306f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\6098fdbb79d1bc0f9e134a522ff889c68371263b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="71eda10e33212e44245524b5087366ff8d805825">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4d2c492ca5cffd681d50cdcc1a1ce3621ce0cd8c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b95b1841d7301691abe54047e2dfc4a7a9d0e800\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0c3e81d3eb86b86d194b5cdb6a4de78203f6f7fd">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_661cd1408a68e4b3eb0f5111d29bb529ffc01b9a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.10.0\7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e\okhttp-3.10.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.10.0_c3d0b4f4d94626b5162db2391135f2b8a9fa73f2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\f823f502b5490b60e92c924b26d10c54dc0c0dd7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="724ce977487ab3a215d4d2eb47d8dccd9f30013f">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7e511a0a4506597a119ea8a449e41bb2e5f80138\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\fe863c0a1d3d2e067c28366c1269f3ba0d640ba8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5b9ad1992f91b0349c1d061f33fd1cf6b37abcc5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\fbf64f51542e12ae2346365891a43da0cf124111\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_cdeedd2b8b348789d1025614c939e3d81958887a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\d208c205943a13ea5715b7d6d4957ce247096d26\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea34579b1be157cd792376362157e9c54ebb4cd7">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4452fbd44c1ee5c8d1aaa0fba4acd7d37149cb8b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\92595c1094a360744eead2be8050497d93f5f73e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0317997e15fab2bc8c85d31bbadcfd1bc8d5d468\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\0b0137ea07ca7f0ee2292fef801771811260a896\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4e25e44ecf0f7403b5bb763ea306982fe1555724\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\46e4e801dbd84af5d5c93eba84ac391e9109caae\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="56690259d2254d4d0216730ec6889a577b61812c">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_81cfe763f17e74827e111665c2869e7fdcb88804\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\8452780428ae928a74520827e61707887777ef15\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e475ab04454fccdc23d5d777f8f666ac048d632e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.0_35538df032836093163f7e5d3b18221cbf71a501\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_6b7c38a60ea418260d8d58bf3188f12edad7d1fc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\92bc8c798862e828799cd87d2ac8cc0b1ee4636d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9cbdabba632cbf8be001cdbf34110cf42a64015">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1b4a71ecd9386fe369f229f9824f80c5f3dc3045\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\fc08f3909d24e6d8ee84ba520e1f032a7a0f12b0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5c8e5fcf2135e4132e1a8c940a18b783547ce984\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b8190c60e739cfbebe1d23ecdee9572a9b0d7df7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9aedc597d74c6d77258ce5236e9abff0c3cc65e3">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_76ca506da369598e3a163adb7c08a48a46522df6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\aa0398994bb089db775337a034cd716c083cde4e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0af4f577b4a21eb9be2a7f52e33b077b67e6d9f8">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1f4e2cb19eebecbed97eb667c84692939cd1c0e1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\22de7fd4613dcb3fd3b69dae10d918354d6a9b1c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c849cdddeaaaad96e6c61e9ccbc88be0e8f02542\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\f736fb4a38a5108de55187158810fd323c30151f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="697679619b00837e3d09e9988a2e1e2a9009d502">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2b68ec7c31c85bb75bd967875847dcf74c0703b8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\92595c1094a360744eead2be8050497d93f5f73e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0317997e15fab2bc8c85d31bbadcfd1bc8d5d468\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\deab6a31190764fa087f26e6ffdf3a9bf51eea29\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a9682ecaed51724ff5374f6dd4649bcac223630f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\57d6e00729c4c5b547f3813c40f0c0dcadf02743\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3f53951ba32a834e6a070fd76213338bc7d4a07d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.4.0\15d7790ee311d961379c51b00aba12d5967cb7ea\converter-gson-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15d7790ee311d961379c51b00aba12d5967cb7ea">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.4.0_e3dc25c92c2062f3df169ba6c25b5299f0b5306f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\86913dc1b0096eb83b555243577a3a8ee5d61d82\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a1897426566e408a5c20a3d931f77d89771d07f">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_171905914714db7973c1d04d729db41c56ec93a3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b041adbd8748e8a2d7d3aaeeeac0b38cddce5a23\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6d9ed9a288364688e7fcf6704776284dac1eb42e">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a57f46dbc787083579677c9cd79bc8a60ab0f7aa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_ab13f616f40622a9e28a45b3842236586a091b13\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\6098fdbb79d1bc0f9e134a522ff889c68371263b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="71eda10e33212e44245524b5087366ff8d805825">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4d2c492ca5cffd681d50cdcc1a1ce3621ce0cd8c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\4fff64f22398a4374e321354f1bca557fe920942\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf94678214d9ab43a8deb5df90d0b3e6d619ff1e">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a16059b19091052e39e5adb08957cb8d60e82923\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.4.1\381fc1096ba65040d8e80ea43b2e1d9bad02345e\logging-interceptor-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="381fc1096ba65040d8e80ea43b2e1d9bad02345e">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\logging-interceptor-3.4.1_72cd3c4cb33f35b9245d65b6e26071bb2457f435\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\92bc8c798862e828799cd87d2ac8cc0b1ee4636d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9cbdabba632cbf8be001cdbf34110cf42a64015">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1b4a71ecd9386fe369f229f9824f80c5f3dc3045\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\c57ae3aa98669cc15aec191994e4f50d796164a4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="744c49c02a27569cc4cc049685d3649e4ef439f2">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_abbdaf58db3eec1902ce457b1adc508fcfb5dcc6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_ab13f616f40622a9e28a45b3842236586a091b13\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\d208c205943a13ea5715b7d6d4957ce247096d26\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea34579b1be157cd792376362157e9c54ebb4cd7">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4452fbd44c1ee5c8d1aaa0fba4acd7d37149cb8b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\fbf64f51542e12ae2346365891a43da0cf124111\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_cdeedd2b8b348789d1025614c939e3d81958887a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\b645876cd42e9006f28eb716b352f75a5101a5a2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e70a3fed299d84cd868614e11021664d72b8e488">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_54838edf0765f8bf4a95ef5ceb5549fb683cc219\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\f823f502b5490b60e92c924b26d10c54dc0c0dd7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="724ce977487ab3a215d4d2eb47d8dccd9f30013f">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7e511a0a4506597a119ea8a449e41bb2e5f80138\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\fe863c0a1d3d2e067c28366c1269f3ba0d640ba8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5b9ad1992f91b0349c1d061f33fd1cf6b37abcc5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\a664a22766297fcf2e9dcbc9062093a74ade742f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ff56462e2a1f48764ec2d8b9a3971c2eaf5bb587\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.10.0\7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e\okhttp-3.10.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.10.0_c3d0b4f4d94626b5162db2391135f2b8a9fa73f2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\8f90fa6ca3e02264ed9fd76eab229e5d5da86db6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_989f2c3209c94f3e8ef912666c99940dfd9fdb8e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\46e4e801dbd84af5d5c93eba84ac391e9109caae\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="56690259d2254d4d0216730ec6889a577b61812c">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_81cfe763f17e74827e111665c2869e7fdcb88804\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\0b0137ea07ca7f0ee2292fef801771811260a896\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4e25e44ecf0f7403b5bb763ea306982fe1555724\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\fc08f3909d24e6d8ee84ba520e1f032a7a0f12b0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5c8e5fcf2135e4132e1a8c940a18b783547ce984\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\3b83d9a8e008fa5e41b7eed02a174766b721878d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fd76d95678a6b2b8a49bb8a9fb5bcef7aedb70e7">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_68c05ced01392cfbd37bfd2f99bea39e45b35f17\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.0_35538df032836093163f7e5d3b18221cbf71a501\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andrevieira\.android\build-cache\8452780428ae928a74520827e61707887777ef15\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e475ab04454fccdc23d5d777f8f666ac048d632e\classes.dex" />
     </item>
 
 </items>

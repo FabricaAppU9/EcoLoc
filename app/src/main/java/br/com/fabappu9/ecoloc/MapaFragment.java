@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -22,6 +23,7 @@ import android.view.ViewGroup;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -52,7 +54,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
     private Marker mMarker, mCurrLocation;
     private String cadastrarEstePonto = "Deseja cadastrar este ponto?";
     private String cadastrarSnippet = "";
-    private GoogleMap mGoogleMap;
+    private static GoogleMap mGoogleMap;
 
     private View mView;
     private LatLng latLng;
@@ -60,10 +62,13 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
     private LocationRequest mLocationRequest;
     private static final String TAG = "MapaFragment";
 
+    public CameraPosition cameraGoogle = null;
+
     public static final int CONSTANTE_TELA_1 = 1;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor sharedPrefEditor;
     private APILocation location;
+
 
     @Override
     public void onAttach(Context context) {
@@ -160,9 +165,11 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                     TAG_CODE_PERMISSION_LOCATION);
         }
 
-        mGoogleMap.setMyLocationEnabled(true);
         mGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mGoogleMap.setMyLocationEnabled(true);
+        mGoogleMap.getUiSettings().isZoomControlsEnabled();
         mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
 
 
         mapWorkFragment.configurarCallback(mGoogleMap);
@@ -212,6 +219,8 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                 }
             }
         });
+
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -227,7 +236,27 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
     }
 
 
+    private void createNoGpsDialog(){
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which) {
+                    case DialogInterface.BUTTON_POSITIVE:
+                        Intent callGPSSettingIntent = new Intent(
+                                android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                        startActivity(callGPSSettingIntent);
+                        break;
+                }
+            }
+        };
 
+        //AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //mNoGpsDialog = builder.setMessage("Por favor ative seu GPS para usar esse aplicativo.")
+          //      .setPositiveButton("Ativar", dialogClickListener)
+            //    .create();
+        //mNoGpsDialog.show();
+
+    }
 
 
 
@@ -236,12 +265,13 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
         private List<PontoDto> pontos =null;
         Call<List<PontoDto>> retorno = null;
 
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
 
-            cameraGoogle = CameraPosition.builder().target(new LatLng(-23.5489, -46.6388)).zoom(9).bearing(0).tilt(4).build();
+            cameraGoogle = CameraPosition.builder().target(new LatLng(-23.5489, -46.6388)).zoom(15).bearing(0).tilt(4).build();
         }
 
 
