@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,11 +12,20 @@
         android:text="Nos de mais informações sobre esse ponto"
         android:textAlignment="center"
         android:textSize="21sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.100000024"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/textView2" />
 
     <EditText
-        android:layout_marginTop="30dp"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
@@ -23,20 +33,36 @@
         android:gravity="center"
         android:background="@drawable/rounded_edit_text"
         android:hint="Nome"
-        android:id="@+id/edtNomePonto"/>
+        android:id="@+id/edtNomePonto"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.3" />
 
 
     <EditText
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
         android:ellipsize="start"
         android:gravity="center"
-        android:layout_marginTop="30dp"
         android:background="@drawable/rounded_edit_text"
         android:hint="Endereço"
-        android:id="@+id/editTxtEndereco"/>
+        android:id="@+id/editTxtEndereco"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
 
     <EditText
         android:layout_width="300dp"
@@ -44,10 +70,18 @@
         android:layout_gravity="center"
         android:ellipsize="start"
         android:gravity="center"
-        android:layout_marginBottom="30dp"
         android:background="@drawable/rounded_edit_text"
         android:hint="Tipo de Descarte"
-        android:id="@+id/edtTipoDescarte"/>
+        android:id="@+id/edtTipoDescarte"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
 
     <Button
         android:layout_width="200dp"
@@ -56,6 +90,16 @@
         android:textColor="#FFF"
         android:text="Cadastrar"
         android:layout_gravity="center"
-        android:id="@+id/btnCadastrarPonto"/>
+        android:id="@+id/btnCadastrarPonto"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.503" />
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
