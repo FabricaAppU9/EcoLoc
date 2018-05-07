@@ -74,9 +74,9 @@ public class APIClient {
                 @Query("CHAVE") String chave,
                 @Query("CHAMADA") String chamada,
                 @Query("DESCRICAO") String nome,
-                @Query("TIPOMATERIAL") String tipomaterial,
                 @Query("LATITUDE") String latitude,
-                @Query("LONGETUDE") String longitude
+                @Query("LONGETUDE") String longitude,
+                @Query("IDUSUARIODTO") String idUsuarioDto
         );
         @GET("ponto.php")
         Call<List<PontoDto>> getPontoDTO(

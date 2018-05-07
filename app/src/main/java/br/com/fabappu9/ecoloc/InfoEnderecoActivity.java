@@ -1,6 +1,8 @@
 package br.com.fabappu9.ecoloc;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,6 +31,7 @@ public class InfoEnderecoActivity extends AppCompatActivity {
     Double latitude,longitude;
     private Button btnCadastrarPonto;
     private Callback<Resposta> respostaCallback;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +69,8 @@ public class InfoEnderecoActivity extends AppCompatActivity {
                 if (tipomaterial.getText().toString().equals("") || nome.getText().toString().equals("")){
                     Toast.makeText(InfoEnderecoActivity.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
                 }else {
+                    sharedPreferences = getSharedPreferences("id", Context.MODE_PRIVATE);
+                    String id = sharedPreferences.getString("id", "8");
                     resposta = new APIClient().getRestService().setPontoDTO("12345",
                             "CRIARPONTO",
                              nome.getText().toString(),
