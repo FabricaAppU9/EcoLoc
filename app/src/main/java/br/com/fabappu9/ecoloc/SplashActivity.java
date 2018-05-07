@@ -48,6 +48,7 @@ public class SplashActivity extends AppCompatActivity {
                     }else{
                         Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                         startActivity(intent);
+                        finish();
                     }
                 }
             }
@@ -87,6 +88,7 @@ public class SplashActivity extends AppCompatActivity {
             public void onFailure(Call<RespostaLogin> call, Throwable error) {
                 Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
