@@ -17,4 +17,8 @@
     <string name="ja_tem_uma_conta">Já tem uma conta? <font color='#0000EE'>Login</font></string>
     <!--Mensagem de alert dialog do MapaFragment-->
     <string name="alert_maps"></string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

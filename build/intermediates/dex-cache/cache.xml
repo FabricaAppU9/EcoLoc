@@ -3,84 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\vinif_000\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.14.0\102d7be47241d781ef95f1581d414b0943053130\okio-1.14.0.jar"
+        jar="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="102d7be47241d781ef95f1581d414b0943053130">
-        <dex dex="C:\Users\vinif_000\Desktop\Projeto Fabrica\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.14.0_ba800d68bc4154ac03a99d67dc44914fdbf7e1a8\classes.dex" />
+        sha1="fc90b06be9d4ef9d49201279f565bc835c901f77">
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_03baf8a29a6af365e0b978dc42cbd30f8dda02b2\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\vinif_000\.android\build-cache\f1049de65f3347c6c1c5ee92925a02b975da64a7\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bf94678214d9ab43a8deb5df90d0b3e6d619ff1e">
-        <dex dex="C:\Users\vinif_000\Desktop\Projeto Fabrica\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a68d8c8b7bb206dc4ffe5729c79bd872eede8871\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vinif_000\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.4.0\15d7790ee311d961379c51b00aba12d5967cb7ea\converter-gson-2.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="15d7790ee311d961379c51b00aba12d5967cb7ea">
-        <dex dex="C:\Users\vinif_000\Desktop\Projeto Fabrica\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.4.0_24773901af7c902a993c05f94a142faafeb6794a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vinif_000\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.10.0\7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e\okhttp-3.10.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7ef0f1d95bf4c0b3ba30bbae25e0e562b05cf75e">
-        <dex dex="C:\Users\vinif_000\Desktop\Projeto Fabrica\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.10.0_bb213e28e54b17aec866dddbb72375dd31047fa6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vinif_000\Desktop\Projeto Fabrica\EcoLoc\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1b9a1be14639af219df5628b7b2e72bb25c65139">
-        <dex dex="C:\Users\vinif_000\Desktop\Projeto Fabrica\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_2f37c450d25c39f91c5b51cf526ad073a2d9e442\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vinif_000\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.4.0\fc4aa382632bfaa7be7b41579efba41d5a71ecf3\retrofit-2.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fc4aa382632bfaa7be7b41579efba41d5a71ecf3">
-        <dex dex="C:\Users\vinif_000\Desktop\Projeto Fabrica\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.4.0_bcdd9fcef9269745fb2541dcd6cfd25b152498ca\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vinif_000\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.2\3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf\gson-2.8.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf">
-        <dex dex="C:\Users\vinif_000\Desktop\Projeto Fabrica\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.8.2_7ea45bbf2838fc402d6204906d39712bbf2760a8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vinif_000\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.4.1\381fc1096ba65040d8e80ea43b2e1d9bad02345e\logging-interceptor-3.4.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="381fc1096ba65040d8e80ea43b2e1d9bad02345e">
-        <dex dex="C:\Users\vinif_000\Desktop\Projeto Fabrica\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10\logging-interceptor-3.4.1_eab7be542d276c18cad14259f347336c2e3253f8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vinif_000\Desktop\Projeto Fabrica\EcoLoc\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\vinif_000\Desktop\Projeto Fabrica\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_161f21f301be922832c44ff8103f658d884aba14\classes.dex" />
+        <dex dex="C:\Users\andrevieira\Desktop\EcoLoc\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_6b7c38a60ea418260d8d58bf3188f12edad7d1fc\classes.dex" />
     </item>
 
 </items>
