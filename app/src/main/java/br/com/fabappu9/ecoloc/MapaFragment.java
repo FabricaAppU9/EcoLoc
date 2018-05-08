@@ -185,7 +185,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                 String clickCount;
                 clickCount = marker.getTitle();
 
-                if (!clickCount.equals(cadastrarEstePonto)) {
+                if (clickCount.equals(cadastrarEstePonto)) {
 
                     double latitude = marker.getPosition().latitude;
                     double longitude = marker.getPosition().longitude;
@@ -271,7 +271,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
 
-            cameraGoogle = CameraPosition.builder().target(new LatLng(-23.5489, -46.6388)).zoom(15).bearing(0).tilt(4).build();
+            cameraGoogle = CameraPosition.builder().target(new LatLng(-23.5489, -46.6388)).zoom(9).bearing(0).tilt(4).build();
         }
 
 
