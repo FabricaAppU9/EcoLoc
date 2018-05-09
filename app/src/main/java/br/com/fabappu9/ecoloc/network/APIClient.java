@@ -41,7 +41,7 @@ public class APIClient {
             OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
             REST_ADAPTER = new Retrofit
                     .Builder()
-                    .baseUrl("http://devjan.esy.es/ws_app/v1/")
+                    .baseUrl("http://janjrs.000webhostapp.com/ws_app/v1/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(client)
                     .build();
