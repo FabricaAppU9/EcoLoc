@@ -74,9 +74,9 @@ public class InfoEnderecoActivity extends AppCompatActivity {
                     resposta = new APIClient().getRestService().setPontoDTO("12345",
                             "CRIARPONTO",
                              nome.getText().toString(),
-                             tipomaterial.getText().toString(),
                              latitude.toString(),
-                             longitude.toString()
+                             longitude.toString(),
+                             id
                     );
                     configurarCallback(resposta);
                 }
