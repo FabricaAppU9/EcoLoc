@@ -1,6 +1,7 @@
 package br.com.fabappu9.ecoloc;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
@@ -8,9 +9,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.location.Criteria;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
@@ -21,9 +25,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
+
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -37,13 +40,13 @@ import java.util.List;
 
 import br.com.fabappu9.ecoloc.DTO.PontoDto;
 import br.com.fabappu9.ecoloc.network.APIClient;
-import br.com.fabappu9.ecoloc.network.APILocation;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
  * Created by Geraldo on 06/06/2017.
+ * Fixed By Guilherme on 12/05/2018
  */
 
 public class MapaFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
@@ -51,23 +54,18 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
     private static final int TAG_CODE_PERMISSION_LOCATION = 1;
     private RetainedFragment mapWorkFragment;
     private MapView mMapView;
-    private Marker mMarker, mCurrLocation;
+    private Marker mMarker;
     private String cadastrarEstePonto = "Deseja cadastrar este ponto?";
     private String cadastrarSnippet = "";
+
     private static GoogleMap mGoogleMap;
 
     private View mView;
-    private LatLng latLng;
-    private GoogleApiClient mGoogleApiClient;
-    private LocationRequest mLocationRequest;
+
     private static final String TAG = "MapaFragment";
 
-    public CameraPosition cameraGoogle = null;
-
     public static final int CONSTANTE_TELA_1 = 1;
-    private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor sharedPrefEditor;
-    private APILocation location;
 
 
     @Override
@@ -104,24 +102,8 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
         super.onViewCreated(view, savedInstanceState);
         LayoutInflater inflater = getActivity().getLayoutInflater();
 
-        sharedPreferences = getActivity().getSharedPreferences("jaLogouAntes", Context.MODE_PRIVATE);
-        sharedPrefEditor = sharedPreferences.edit();
 
-        // --- tela info instruções de uso ---
-        Boolean jaLogouAntes = sharedPreferences.getBoolean("jaLogouAntes", false);
-        if(!jaLogouAntes){
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("Instuções")
-                    .setView(inflater.inflate(R.layout.alert_dialog,null))
-                    .setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            Boolean conferindo = sharedPrefEditor.putBoolean("jaLogouAntes", true).commit();
-                            Log.d(TAG, "onClick: "+ conferindo);
-                        }
-                    });
-            builder.show();
-        }
-
+        mostraMensagemComInformacoesNoPrimeiroLogin(inflater);
 
         mMapView = (MapView) mView.findViewById(R.id.map);
         if (mMapView != null) {
@@ -145,17 +127,40 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
         mapWorkFragment.cameraGoogle = mGoogleMap.getCameraPosition();
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mMapView.onDestroy();
+    }
+
+    @SuppressLint("InflateParams")
+    private void mostraMensagemComInformacoesNoPrimeiroLogin(LayoutInflater inflater) {
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("jaLogouAntes", Context.MODE_PRIVATE);
+        sharedPrefEditor = sharedPreferences.edit();
+
+        Boolean jaLogouAntes = sharedPreferences.getBoolean("jaLogouAntes", false);
+        if(!jaLogouAntes){
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle("Instuções")
+                    .setView(inflater.inflate(R.layout.alert_dialog,null))
+                    .setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            Boolean conferindo = sharedPrefEditor.putBoolean("jaLogouAntes", true).commit();
+                            Log.d(TAG, "onClick: "+ conferindo);
+                        }
+                    });
+            builder.show();
+        }
+    }
+
 
     // --- Mapa ---
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(final GoogleMap googleMap) {
 
         mGoogleMap = googleMap;
 
-        if (ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_FINE_LOCATION) ==
-                PackageManager.PERMISSION_GRANTED &&
-                ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_COARSE_LOCATION) ==
-                        PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_FINE_LOCATION) ==  PackageManager.PERMISSION_GRANTED &&  ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_COARSE_LOCATION) ==  PackageManager.PERMISSION_GRANTED) {
             mGoogleMap.setMyLocationEnabled(true);
             mGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
         } else {
@@ -165,6 +170,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                     TAG_CODE_PERMISSION_LOCATION);
         }
 
+
         mGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
         mGoogleMap.setMyLocationEnabled(true);
         mGoogleMap.getUiSettings().isZoomControlsEnabled();
@@ -172,13 +178,13 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
 
 
 
-        mapWorkFragment.configurarCallback(mGoogleMap);
+        mapWorkFragment.configurarCallbackParaCarregarOsPontos(mGoogleMap);
 
-        // APILocation location=new APILocation();
-        // location.callLocalization();
-        //mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(-23.759310021069908, -46.79334104061127)).title("Minha ultima posição com sinal").snippet("Testando map fragment"));
         mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(-23.5489, -46.6388)).title("Minha ultima posição com sinal").snippet("Testando map fragment"));
-        mGoogleMap.moveCamera(CameraUpdateFactory.newCameraPosition(mapWorkFragment.cameraGoogle));
+
+
+        centralizarCamera(mGoogleMap);
+
         mGoogleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
@@ -211,16 +217,34 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                     mMarker.remove();
                     Log.d(TAG, "onMapClick: [" + latLng.latitude + "/" + latLng.longitude + "]");
                     cadastrarSnippet = Localizador.encontrarEndereco(getActivity(), latLng.latitude, latLng.longitude);
-                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarSnippet));
+                    mMarker = googleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarSnippet));
                 } else {
                     Log.d(TAG, "onMapClick: [" + latLng.latitude + "/" + latLng.longitude + "]");
                     cadastrarSnippet = Localizador.encontrarEndereco(getActivity(), latLng.latitude, latLng.longitude);
-                    mMarker = mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarSnippet));
+                    mMarker = googleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarSnippet));
                 }
             }
         });
 
 
+    }
+
+    private void centralizarCamera(GoogleMap googleMap) {
+        LatLng coordenada = buscarLocalizacaoDoUsuario(mView.getContext());
+        CameraUpdate update = CameraUpdateFactory.newLatLngZoom(coordenada, 15);
+        googleMap.moveCamera(update);
+    }
+
+    @SuppressLint("MissingPermission")
+    private LatLng buscarLocalizacaoDoUsuario(Context context){
+        LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        Criteria criteria = new Criteria();
+
+        assert locationManager != null;
+        Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria, false));
+        double latitude = location.getLatitude();
+        double longitude = location.getLongitude();
+        return new LatLng(latitude,longitude);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -229,16 +253,11 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
         return false;
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mMapView.onDestroy();
-    }
 
-
+    /** - Caso seja trabalho de alguem. favor finalizar ao inves de deixar o método pela metade. Grato
     private void createNoGpsDialog(){
         DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-            @Override
+            //@Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case DialogInterface.BUTTON_POSITIVE:
@@ -257,6 +276,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
         //mNoGpsDialog.show();
 
     }
+    */
 
 
 
@@ -279,24 +299,23 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
             retorno = new APIClient().getRestService().getPontoDTO("12345", "GETPONTOS", "");
             retorno.enqueue(new Callback<List<PontoDto>>() {
                 @Override
-                public void onResponse(Call<List<PontoDto>> call, Response<List<PontoDto>> response) {
+                public void onResponse(@NonNull Call<List<PontoDto>> call, @NonNull Response<List<PontoDto>> response) {
                     if (!response.isSuccessful()) {
                         Log.e("ERRO:", response.message());
                     } else {
                         pontos = response.body();
-                        configurarCallback(mGoogleMap);
+                        configurarCallbackParaCarregarOsPontos(mGoogleMap);
                     }
                 }
                 @Override
-                public void onFailure(Call<List<PontoDto>> call, Throwable error) {
-                    //Toast.makeText(MapaFragment.this, "Deu Ruim: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                public void onFailure(@NonNull Call<List<PontoDto>> call, @NonNull Throwable error) {
+                    Log.e("ERRO:", error.getMessage());
                 }
             });
         }
 
 
-        // ---- carregamento no mapa -----
-        private void configurarCallback(GoogleMap mGoogleMap) {
+        private void configurarCallbackParaCarregarOsPontos(GoogleMap mGoogleMap) {
             if (pontos != null) {
                 for (int i = 0; i < pontos.size(); i++) {
                     mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(Double.parseDouble(pontos.get(i).getLatitude()), Double.parseDouble(pontos.get(i).getLongitude())))

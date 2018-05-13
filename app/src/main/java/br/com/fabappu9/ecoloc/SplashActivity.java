@@ -19,10 +19,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- */
+
 public class SplashActivity extends AppCompatActivity {
 
 
@@ -54,8 +51,6 @@ public class SplashActivity extends AppCompatActivity {
             }
         };
         timerThread.start();
-
-
 
     }
 

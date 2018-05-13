@@ -87,11 +87,6 @@ public class LoginActivity extends AppCompatActivity {
         retorno.enqueue(new Callback<RespostaLogin>() {
             @Override
             public void onResponse(Call<RespostaLogin> call, Response<RespostaLogin> response) {
-               /* try {
-                    new Thread().sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }*/
                 if (!response.isSuccessful()){
                     Log.e("ERRO:",response.message());
                 }else{

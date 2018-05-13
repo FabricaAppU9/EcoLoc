@@ -7,18 +7,19 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:padding="15dp"
-        android:textSize="20sp"
         android:text="1# Para capturar posição no mapa, faça um clique longo. "
+        android:textSize="20sp"
 
         />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:padding="15dp"
-        android:textSize="20sp"
         android:text="2# Clique no título do local para mais informações "
+        android:textSize="20sp"
 
         />
 

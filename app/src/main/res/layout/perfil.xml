@@ -7,64 +7,57 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/txtNomeUsuario"
+        android:id="@+id/txtApelidoUsuario"
         android:layout_width="218dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:text="Guilherme Golfetto"
         android:textAlignment="center"
         android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toBottomOf="@+id/imgUsuarioImagem" />
 
 
     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/profile_image"
+        android:id="@+id/imgUsuarioImagem"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/modelo"
         app:civ_border_color="@color/colorPrimary"
         app:civ_border_width="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.060000002" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/txtNomeCompleto"
         android:layout_width="300dp"
         android:layout_height="49dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="176dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edit_text"
         android:ellipsize="start"
         android:enabled="false"
         android:gravity="center"
-        android:hint="23 Anos"
+        android:hint="Guilherme Golfetto"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintTop_toBottomOf="@+id/txtApelidoUsuario"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txtQuantidadePontos"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="92dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edit_text"
         android:ellipsize="start"
@@ -74,48 +67,23 @@
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeCompleto"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="45dp"
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_edit_text"
-        android:ellipsize="start"
-        android:enabled="false"
-        android:gravity="center"
-        android:hint="Localidade Favorita: São Paulo"
-        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/logou_button"
+        android:text="Logout"
+        android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.69" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="24dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_edit_text"
-        android:ellipsize="start"
-        android:enabled="false"
-        android:gravity="center"
-        android:hint="Descarte Favorito: Plástico"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85" />
 
 
 </android.support.constraint.ConstraintLayout>

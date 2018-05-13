@@ -16,22 +16,17 @@ import com.google.android.gms.maps.MapFragment;
 
 /**
  * Created by Geraldo on 06/06/2017.
+ * Fixed by Guilherme on 12/05/2018
  */
 
 public class PerfilFragment extends Fragment {
-    private View view =null;
+
+    private View view;
+
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
         if(view == null)
             view= inflater.inflate(R.layout.perfil, container, false);
         return view;
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        MapaFragment.RetainedFragment fragment = (MapaFragment.RetainedFragment) getFragmentManager().findFragmentByTag("work");
-
-        if (fragment != null) {
-            fragment.setTargetFragment(this, 0);
-        }
-    }}
+}
