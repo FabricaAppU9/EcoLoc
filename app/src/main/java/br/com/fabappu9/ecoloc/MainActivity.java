@@ -17,8 +17,7 @@ import br.com.fabappu9.ecoloc.data.SharedPreferenceHelper;
 
 
 public class MainActivity extends AppCompatActivity {
-
-    Toolbar toolbar;
+    
     SharedPreferenceHelper sharedPreferences;
 
     @Override
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         sharedPreferences = new SharedPreferenceHelper(MainActivity.this);
-        
+
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
