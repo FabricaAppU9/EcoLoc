@@ -5,101 +5,103 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="16dp"
     tools:context="br.com.fabappu9.ecoloc.InfoEnderecoActivity">
 
     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:text="Nos de mais informações sobre esse ponto"
         android:textAlignment="center"
         android:textSize="21sp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.100000024"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:id="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <EditText
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:layout_gravity="center"
-        android:ellipsize="start"
-        android:gravity="center"
-        android:background="@drawable/rounded_edit_text"
-        android:hint="Nome"
+        android:layout_weight="1"
         android:id="@+id/edtNomePonto"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.3" />
-
-
-    <EditText
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edit_text"
+        android:elevation="0.in"
         android:ellipsize="start"
         android:gravity="center"
-        android:background="@drawable/rounded_edit_text"
-        android:hint="Endereço"
+        android:hint="Nome"
+        app:layout_constraintBottom_toTopOf="@+id/editTxtEndereco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:layout_weight="1"
         android:id="@+id/editTxtEndereco"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
-
-    <EditText
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_edit_text"
         android:ellipsize="start"
         android:gravity="center"
-        android:background="@drawable/rounded_edit_text"
-        android:hint="Tipo de Descarte"
-        android:id="@+id/edtTipoDescarte"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
+        android:hint="Endereço"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.25" />
+
 
     <Button
+        android:layout_weight="0"
+        android:id="@+id/btnCadastrarPonto"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:background="@drawable/login_button"
-        android:textColor="#FFF"
-        android:text="Cadastrar"
         android:layout_gravity="center"
-        android:id="@+id/btnCadastrarPonto"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/login_button"
+        android:text="Cadastrar"
+        android:textColor="#FFF"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_weight="0"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Tipo de material para a coleta"
+        app:layout_constraintStart_toStartOf="@+id/list_checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtEndereco" />
+
+    <ListView
+        android:id="@+id/list_checkBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.8"
-        app:layout_constraintHorizontal_bias="0.503" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:isScrollContainer="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrarPonto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 </android.support.constraint.ConstraintLayout>

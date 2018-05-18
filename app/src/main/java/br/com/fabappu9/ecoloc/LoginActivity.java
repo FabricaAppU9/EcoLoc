@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<RespostaLogin> call, Response<RespostaLogin> response) {
                 if (!response.isSuccessful()){
-                    Log.e("ERRO:",response.message());
+                    Toast.makeText(LoginActivity.this, " Erro no servidor" , Toast.LENGTH_SHORT).show();
                 }else{
                     RespostaLogin login = response.body();
                     if (login.getRETORNO().equals("SUCESSO")){

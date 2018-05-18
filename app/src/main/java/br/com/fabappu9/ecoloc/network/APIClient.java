@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 
 import java.util.List;
 
+import br.com.fabappu9.ecoloc.DTO.MaterialDto;
 import br.com.fabappu9.ecoloc.DTO.PontoDto;
 import br.com.fabappu9.ecoloc.DTO.UsuarioDto;
 import br.com.fabappu9.ecoloc.Model.Resposta;
@@ -62,8 +63,8 @@ public class APIClient {
                 @Query("LOGIN") String login,
                 @Query("SENHA") String senha
         );
-       @GET("usuarioDTO.php")
-       Call<RespostaLogin> setUsuarioLoginDTO(
+        @GET("usuarioDTO.php")
+        Call<RespostaLogin> setUsuarioLoginDTO(
                 @Query("CHAVE") String chave,
                 @Query("CHAMADA") String chamada,
                 @Query("LOGIN") String login,
@@ -74,12 +75,19 @@ public class APIClient {
                 @Query("CHAVE") String chave,
                 @Query("CHAMADA") String chamada,
                 @Query("DESCRICAO") String nome,
+                @Query("IDTIPOMATERIAL") String idMaterial,
                 @Query("LATITUDE") String latitude,
                 @Query("LONGETUDE") String longitude,
                 @Query("IDUSUARIODTO") String idUsuarioDto
         );
         @GET("ponto.php")
         Call<List<PontoDto>> getPontoDTO(
+                @Query("CHAVE") String chave,
+                @Query("CHAMADA") String chamada,
+                @Query("PARAM") String nome
+        );
+        @GET("tipoMaterial.php")
+        Call<List<MaterialDto>> getMaterialDTO(
                 @Query("CHAVE") String chave,
                 @Query("CHAMADA") String chamada,
                 @Query("PARAM") String nome

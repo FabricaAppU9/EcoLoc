@@ -44,6 +44,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.app.Activity.RESULT_OK;
+
 /**
  * Created by Geraldo on 06/06/2017.
  * Fixed By Guilherme on 12/05/2018
@@ -52,6 +54,8 @@ import retrofit2.Response;
 public class MapaFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
 
     private static final int TAG_CODE_PERMISSION_LOCATION = 1;
+    private static final int TAG_NOVO_PONTO_CADASTRADO = 2;
+
     private RetainedFragment mapWorkFragment;
     private MapView mMapView;
     private Marker mMarker;
@@ -64,7 +68,6 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
 
     private static final String TAG = "MapaFragment";
 
-    public static final int CONSTANTE_TELA_1 = 1;
     private SharedPreferences.Editor sharedPrefEditor;
 
 
@@ -192,19 +195,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                 clickCount = marker.getTitle();
 
                 if (clickCount.equals(cadastrarEstePonto)) {
-
-                    double latitude = marker.getPosition().latitude;
-                    double longitude = marker.getPosition().longitude;
-
-                    Bundle params = new Bundle();
-                    params.putString("Endereco", Localizador.encontrarEndereco(getActivity(), latitude, longitude));
-                    params.putDouble("Latitude", latitude);
-                    params.putDouble("Longitude", longitude);
-                    Intent intent = new Intent(getActivity(), InfoEnderecoActivity.class);
-
-                    intent.putExtras(params);
-
-                    startActivityForResult(intent, CONSTANTE_TELA_1);
+                    addPonto(marker.getPosition());
                 }
             }
         });
@@ -222,11 +213,38 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
                     Log.d(TAG, "onMapClick: [" + latLng.latitude + "/" + latLng.longitude + "]");
                     cadastrarSnippet = Localizador.encontrarEndereco(getActivity(), latLng.latitude, latLng.longitude);
                     mMarker = googleMap.addMarker(new MarkerOptions().position(new LatLng(latLng.latitude, latLng.longitude)).title(cadastrarEstePonto).snippet(cadastrarSnippet));
+                    addPonto(latLng);
                 }
             }
         });
 
 
+    }
+
+
+    private void addPonto(LatLng latLng){
+        double latitude = latLng.latitude;
+        double longitude = latLng.longitude;
+        Bundle params = new Bundle();
+        params.putString("Endereco", Localizador.encontrarEndereco(getActivity(), latitude, longitude));
+        params.putDouble("Latitude", latitude);
+        params.putDouble("Longitude", longitude);
+        Intent intent = new Intent(getActivity(), InfoEnderecoActivity.class);
+        intent.putExtras(params);
+        startActivityForResult(intent, TAG_NOVO_PONTO_CADASTRADO);
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode ==  TAG_NOVO_PONTO_CADASTRADO && resultCode == RESULT_OK){
+            mMarker =null;
+            mGoogleMap.clear();
+            mapWorkFragment.iniCallback(mGoogleMap);
+        }else{
+            mMarker =null;
+        }
     }
 
     private void centralizarCamera(GoogleMap googleMap) {
@@ -254,32 +272,9 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
     }
 
 
-    /** - Caso seja trabalho de alguem. favor finalizar ao inves de deixar o método pela metade. Grato
-    private void createNoGpsDialog(){
-        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-            //@Override
-            public void onClick(DialogInterface dialog, int which) {
-                switch (which) {
-                    case DialogInterface.BUTTON_POSITIVE:
-                        Intent callGPSSettingIntent = new Intent(
-                                android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                        startActivity(callGPSSettingIntent);
-                        break;
-                }
-            }
-        };
-
-        //AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        //mNoGpsDialog = builder.setMessage("Por favor ative seu GPS para usar esse aplicativo.")
-          //      .setPositiveButton("Ativar", dialogClickListener)
-            //    .create();
-        //mNoGpsDialog.show();
-
-    }
-    */
 
 
-
+//--------------------------------------------------------------------------------------------------
     public static class RetainedFragment extends Fragment {
         protected CameraPosition cameraGoogle = null;
         private List<PontoDto> pontos =null;
@@ -295,7 +290,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
         }
 
 
-        private void iniCallback(final GoogleMap mGoogleMap){
+        void iniCallback(final GoogleMap mGoogleMap){
             retorno = new APIClient().getRestService().getPontoDTO("12345", "GETPONTOS", "");
             retorno.enqueue(new Callback<List<PontoDto>>() {
                 @Override
