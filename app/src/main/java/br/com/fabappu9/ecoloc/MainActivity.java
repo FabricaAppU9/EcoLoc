@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (tabId) {
                     case R.id.mapa:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new MapaFragment(), "mapa").commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new MapaFragment(), "fragment_mapa").commit();
                         break;
                     case R.id.perfil:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new PerfilFragment(), "perfil").commit();
+                        getFragmentManager().beginTransaction().replace(R.id.container, new PerfilFragment(), "fragment_perfil").commit();
                         break;
                 }
 

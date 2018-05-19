@@ -82,7 +82,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback, Google
     }
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.mapa, container, false);
+        mView = inflater.inflate(R.layout.fragment_mapa, container, false);
         return mView;
     }
 

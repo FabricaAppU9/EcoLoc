@@ -9,18 +9,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:text="1# Para capturar posição no mapa, faça um clique longo. "
+        android:text="Para capturar posição no mapa, faça um clique longo. "
         android:textSize="20sp"
 
         />
 
-    <TextView
+    <!--<TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:text="2# Clique no título do local para mais informações "
         android:textSize="20sp"
 
-        />
+        />-->
 
 </LinearLayout>

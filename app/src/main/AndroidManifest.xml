@@ -45,14 +45,23 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC9iV62h0a9pKjUnHg2Fksin4C3a_YpDgs" />
-        <!-- Maps -->
 
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="br.com.fabappu9.ecoloc.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Maps -->
         <activity
             android:name=".InfoEnderecoActivity"
             android:label="Cadastrar Ponto"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>
