@@ -36,7 +36,6 @@ public class Permissoes {
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                     MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
 
-            return;
         }
     }
 }

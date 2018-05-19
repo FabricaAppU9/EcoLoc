@@ -61,7 +61,8 @@ public class APIClient {
                 @Query("CHAMADA") String chamada,
                 @Query("NOME") String nome,
                 @Query("LOGIN") String login,
-                @Query("SENHA") String senha
+                @Query("SENHA") String senha,
+                @Query("FOTO") String foto
         );
         @GET("usuarioDTO.php")
         Call<RespostaLogin> setUsuarioLoginDTO(

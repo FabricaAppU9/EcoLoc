@@ -2,6 +2,7 @@ package br.com.fabappu9.ecoloc;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -86,11 +87,12 @@ public class LoginActivity extends AppCompatActivity {
     private void configurarCallback(Call<RespostaLogin> retorno ) {
         retorno.enqueue(new Callback<RespostaLogin>() {
             @Override
-            public void onResponse(Call<RespostaLogin> call, Response<RespostaLogin> response) {
+            public void onResponse(@NonNull Call<RespostaLogin> call, @NonNull Response<RespostaLogin> response) {
                 if (!response.isSuccessful()){
                     Toast.makeText(LoginActivity.this, " Erro no servidor" , Toast.LENGTH_SHORT).show();
                 }else{
                     RespostaLogin login = response.body();
+                    assert login != null;
                     if (login.getRETORNO().equals("SUCESSO")){
                         SharedPreferenceHelper sharedPreferenceHelper = new SharedPreferenceHelper(LoginActivity.this);
                         if (isCheck()){
@@ -110,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<RespostaLogin> call, Throwable error) {
+            public void onFailure(@NonNull Call<RespostaLogin> call, @NonNull Throwable error) {
                 Toast.makeText(LoginActivity.this, "Deu Ruim: " + error.getMessage(), Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
