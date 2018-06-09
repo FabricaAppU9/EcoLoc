@@ -1,10 +1,12 @@
 package br.com.fabappu9.ecoloc;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -74,7 +76,7 @@ public class InfoEnderecoActivity extends AppCompatActivity {
                 Call<RespostaPonto> resposta;
 
                 if (getCheckedItemCount() == 0 || nome.getText().toString().equals("")){
-                    Toast.makeText(InfoEnderecoActivity.this, "Preencha todos os campos "+ getIdsTems(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InfoEnderecoActivity.this, "Preencha todos os campos ", Toast.LENGTH_SHORT).show();
                 }else {
                     sharedPreferences = getSharedPreferences("id", Context.MODE_PRIVATE);
                     String id = sharedPreferences.getString("id", "8");
@@ -144,7 +146,7 @@ public class InfoEnderecoActivity extends AppCompatActivity {
             @Override
             public void onResponse(@NonNull Call<RespostaPonto> call, @NonNull Response<RespostaPonto> response) {
                 setResult(RESULT_OK);
-                finish();
+                agradecimento();
             }
 
             @Override
@@ -163,9 +165,24 @@ public class InfoEnderecoActivity extends AppCompatActivity {
 
 
 
+    private void agradecimento(){
+        LayoutInflater li = getLayoutInflater();
+        @SuppressLint("InflateParams") View view = li.inflate(R.layout.alert_agradecimento, null);
+        // btn ok
+        view.findViewById(R.id.btn_ok).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                finish();
+            }
+        });
+        AlertDialog.Builder builder = new AlertDialog.Builder(InfoEnderecoActivity.this);
+        builder.setView(view);
+        builder.create().show();
+    }
 
 
 
+
+//================================ cria a lista dos materiais ========================================
     class MaterialAdapter extends ArrayAdapter<MaterialDto>{
         private int resource;
 
