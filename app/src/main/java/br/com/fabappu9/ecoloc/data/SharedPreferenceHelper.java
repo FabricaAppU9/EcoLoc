@@ -22,12 +22,13 @@ public class SharedPreferenceHelper {
     static final String CHAVE_NOME = "nome";
     static final String CHAVE_FOTO =  "foto";
     static final String CHAVE_ID = "-1";
+    static final String CHAVE_PONTO = "50";
 
     public SharedPreferenceHelper(Context context) {
         this.context = context;
     }
 
-    public void setLogin(String usuario, String senha, String nome, String foto,String id) {
+    public void setLogin(String usuario, String senha, String nome, String foto,String id, String ponto) {
         sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(CHAVE_CHECK, true);
@@ -36,6 +37,7 @@ public class SharedPreferenceHelper {
         editor.putString(CHAVE_NOME, nome);
         editor.putString(CHAVE_FOTO, foto);
         editor.putString(CHAVE_ID,id);
+        editor.putString(CHAVE_PONTO,ponto);
         editor.commit();
         Log.e("shared", sharedPreferences.getString("usuario", "erro"));
     }
@@ -49,6 +51,18 @@ public class SharedPreferenceHelper {
         sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
         return sharedPreferences.getString(CHAVE_SENHA, "");
     }
+    public String getNomeLogin(){
+        sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
+        return sharedPreferences.getString(CHAVE_NOME, "");
+    }
+    public String getFotoLogin(){
+        sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
+        return sharedPreferences.getString(CHAVE_FOTO, "");
+    }
+    public String getIDLogin(){
+        sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
+        return sharedPreferences.getString(CHAVE_ID, "");
+    }
 
     public boolean getCheckLogin(){
         sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
@@ -61,5 +75,16 @@ public class SharedPreferenceHelper {
         editor.putBoolean(CHAVE_CHECK,false);
         editor.commit();
     }
+    public void setPontoLogin(String ponto){
+        sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(CHAVE_PONTO,ponto);
+        editor.commit();
+    }
+    public String getPontoLogin(){
+        sharedPreferences = context.getSharedPreferences(CHAVE_FILE_LOGIN, 0);
+        return sharedPreferences.getString(CHAVE_PONTO,"");
+    }
+
 
 }

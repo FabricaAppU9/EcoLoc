@@ -8,6 +8,7 @@ import java.util.List;
 
 import br.com.fabappu9.ecoloc.DTO.MaterialDto;
 import br.com.fabappu9.ecoloc.DTO.PontoDto;
+import br.com.fabappu9.ecoloc.DTO.RankingDto;
 import br.com.fabappu9.ecoloc.DTO.UsuarioDto;
 import br.com.fabappu9.ecoloc.Model.Resposta;
 import br.com.fabappu9.ecoloc.Model.RespostaLogin;
@@ -92,6 +93,12 @@ public class APIClient {
                 @Query("CHAVE") String chave,
                 @Query("CHAMADA") String chamada,
                 @Query("PARAM") String nome
+        );
+        @GET("ranking.php")
+        Call<List<RankingDto>> getRankingDTO(
+                @Query("CHAVE") String chave,
+                @Query("CHAMADA") String chamada,
+                @Query("PARAM") String param
         );
     }
 }

@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
@@ -19,6 +20,8 @@ import br.com.fabappu9.ecoloc.data.SharedPreferenceHelper;
 public class MainActivity extends AppCompatActivity {
     
     SharedPreferenceHelper sharedPreferences;
+    private TextView apelido;
+    private TextView nome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
-
+                apelido =(TextView) findViewById(R.id.txtApelidoUsuario);
                 switch (tabId) {
                     case R.id.mapa:
                         getFragmentManager().beginTransaction().replace(R.id.container, new MapaFragment(), "fragment_mapa").commit();
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                         getFragmentManager().beginTransaction().replace(R.id.container, new PerfilFragment(), "fragment_perfil").commit();
                         break;
                 }
+
 
             }
         });

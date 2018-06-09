@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import br.com.fabappu9.ecoloc.DTO.RankingDto;
 import br.com.fabappu9.ecoloc.DTO.UsuarioDto;
 import br.com.fabappu9.ecoloc.Model.RespostaLogin;
 import br.com.fabappu9.ecoloc.Permissoes.Permissoes;
@@ -31,9 +32,12 @@ public class LoginActivity extends AppCompatActivity {
     private Button cadastrar;
     private Button login;
     private SpotsDialog dialog;
+    private List<RankingDto> pontosRank =null;
+    Call<List<RankingDto>> retornoPonto = null;
     CheckBox checkBox;
     String Usuario;
     String Senha;
+    String ponto;
 
 
 
@@ -92,11 +96,13 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, " Erro no servidor" , Toast.LENGTH_SHORT).show();
                 }else{
                     RespostaLogin login = response.body();
+
                     assert login != null;
                     if (login.getRETORNO().equals("SUCESSO")){
                         SharedPreferenceHelper sharedPreferenceHelper = new SharedPreferenceHelper(LoginActivity.this);
                         if (isCheck()){
-                            sharedPreferenceHelper.setLogin(login.getLOGIN(),login.getSENHA(), login.getNOME(), login.getFOTO(), login.getID());
+                            getPontos(login.getID());
+                            sharedPreferenceHelper.setLogin(login.getLOGIN(),login.getSENHA(), login.getNOME(), login.getFOTO(), login.getID(),ponto);
                         }else{
                             sharedPreferenceHelper.setCheckLogin();
                         }
@@ -121,6 +127,32 @@ public class LoginActivity extends AppCompatActivity {
 
     public boolean isCheck(){
         return  checkBox.isChecked();
+    }
+
+    public void getPontos(String id){
+
+        retornoPonto = new APIClient().getRestService().getRankingDTO("12345", "GETRANKING",id);
+        retornoPonto.enqueue(new Callback<List<RankingDto>>() {
+            @Override
+            public void onResponse(@NonNull Call<List<RankingDto>> call, @NonNull Response<List<RankingDto>> response) {
+                if (!response.isSuccessful()) {
+                    Log.e("ERRO:", response.message());
+                } else {
+                    pontosRank = response.body();
+                    for (int i = 0; i < pontosRank.size(); i++) {
+                        Toast.makeText(LoginActivity.this, "Pontos " + pontosRank.get(i).getPONTUACAO(), Toast.LENGTH_SHORT).show();
+
+                        ponto = pontosRank.get(i).getPONTUACAO();
+                    }
+                    SharedPreferenceHelper sharedPreferenceHelper = new SharedPreferenceHelper(LoginActivity.this);
+                    sharedPreferenceHelper.setPontoLogin(ponto);
+                }
+            }
+            @Override
+            public void onFailure(@NonNull Call<List<RankingDto>> call, @NonNull Throwable error) {
+                Log.e("ERRO:", error.getMessage());
+            }
+        });
     }
 
 }
